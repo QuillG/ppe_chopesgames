@@ -1,4 +1,4 @@
-<?php
+g<?php
 namespace App\Models;
 use CodeIgniter\Model;
 

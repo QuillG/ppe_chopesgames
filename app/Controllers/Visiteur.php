@@ -222,7 +222,7 @@ class Visiteur extends BaseController
             'txtVille'    => 'required',
             'txtCP' => 'required',
             'txtEmail' => 'required|valid_email|is_unique[client.EMAIL,id,{id}]',
-            'txtMdp'    => 'required'
+            'txtMdp'    => 'required|min_length[4]'
         ];
 
         if (!empty($session->get('statut'))) //régles de validation pour modification
@@ -251,8 +251,8 @@ class Visiteur extends BaseController
             ],
             'txtMdp'    => [
                 'required' => 'Un mot de passe est requis',
-            ]
-        ];
+                'min_length' => 'Mot de passe trop petit',
+            ]];
         $modelCat = new ModeleCategorie();
         $data_bis['categories'] = $modelCat->retourner_categories();
         echo view('templates/header', $data_bis);
@@ -316,12 +316,13 @@ class Visiteur extends BaseController
             'txtEmail' => [
                 'required' => 'Un Email est requis',
                 'valid_email' => 'Un Email valide est requis',
-                'is_not_unique' => 'Adresse E-mail incorrecte',
+                'is_not_unique' => 'Mot de passe ou E-mail incorrect',
             ],
-            'txtMdp'    => [
+            'txtMdp' => [
                 'required' => 'Un mot de passe est requis',
-                'is_not_unique' => 'Mot de passe incorrect',
+                'is_not_unique' => 'Mot de passe ou E-mail incorrect',
             ]
+            
         ];
         $modelCat = new ModeleCategorie();
         $data_bis['categories'] = $modelCat->retourner_categories();

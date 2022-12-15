@@ -1,0 +1,38 @@
+CRITICAL - 2022-12-15 04:43:30 --> syntax error, unexpected single-quoted string "max_lenght[20]", expecting "]"
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('visiteur/accuei...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('visiteur/accuei...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2022-12-15 04:44:39 --> syntax error, unexpected token ";", expecting "]"
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('visiteur/accuei...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('visiteur/accuei...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2022-12-15 04:47:33 --> min_lenght is not a valid rule.
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_lenght')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('txtMdp', 'txtMdp', 'aa', Array, Array)
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(261): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#9 {main}
+CRITICAL - 2022-12-15 04:50:35 --> min_lenght is not a valid rule.
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Validation\Validation.php(285): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_lenght')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('txtMdp', 'txtMdp', 'zer', Array, Array)
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(261): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#9 {main}
