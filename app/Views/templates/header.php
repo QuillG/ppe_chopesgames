@@ -9,16 +9,16 @@ if ($session->has('cart')) {
 <head>
     <title>ChopesGames</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() . 'assets/images/favicon.ico' ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/images/favicon.ico')?>">
     <link rel="alternate" type="application/rss+XML" title="ChopesGames" href="<?php echo site_url('AdministrateurSuper/flux_rss') ?>" />
 
-    <link rel="stylesheet" href="<?= css_url('bootstrap.min') ?>">
-    <link rel="stylesheet" href="<?= css_url('style') ?>">
+    <link rel="stylesheet" href="<?php echo css_url('bootstrap.min') ?>">
+    <link rel="stylesheet" href="<?php echo css_url('style') ?>">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="<?= js_url('bootstrap.min') ?>"></script>
+    <script src="<?php echo js_url('bootstrap.min') ?>"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
@@ -26,18 +26,18 @@ if ($session->has('cart')) {
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <a class="navbar-brand" href="<?php echo site_url('Visiteur/accueil') ?>">
-                <img class="d-block" style="width:60px;height:38px;'" src="<?= base_url() . '/assets/images/logo.jpg' ?>" alt="Logo">
+                <img class="d-block" style="width:60px;height:38px;'" src="<?php echo base_url('/assets/images/logo.jpg')?>" alt="Logo">
             </a>
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a href="<?= site_url('Visiteur/accueil') ?>" class="btn btn-info">
+                    <a href="<?php echo site_url('Visiteur/accueil') ?>" class="btn btn-info">
                         <span class="fas fa-home"></span>Accueil
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="btn btn-primary" href="<?= site_url('Visiteur/lister_les_produits') ?>">Lister tous les Produits</a>
+                    <a class="btn btn-primary" href="<?php echo site_url('Visiteur/lister_les_produits') ?>">Lister tous les Produits</a>
                 </li>
 
             </ul>

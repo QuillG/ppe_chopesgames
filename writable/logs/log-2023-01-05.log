@@ -1,0 +1,116 @@
+CRITICAL - 2023-01-05 04:49:41 --> Unclosed '{' on line 15
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('visiteur/connex...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('visiteur/connex...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-01-05 04:51:03 --> Undefined variable $TitreDeLaPage
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\visiteur\connexion_administrateur.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 2)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/connex...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(408): view('visiteur/connex...')
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->connexion_administrateur()
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-01-05 04:55:31 --> Undefined variable $TitreDeLaPage
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\visiteur\connexion_administrateur.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 2)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/connex...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(408): view('visiteur/connex...')
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->connexion_administrateur()
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-01-05 04:57:07 --> Undefined variable $TitreDeLaPage
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\visiteur\connexion_administrateur.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 2)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/connex...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(411): view('visiteur/connex...')
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->connexion_administrateur()
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-01-05 04:57:16 --> Unclosed '{' on line 15
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('visiteur/connex...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('visiteur/connex...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-01-05 04:57:17 --> Unclosed '{' on line 15
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('visiteur/connex...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('visiteur/connex...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-01-05 04:57:21 --> Unclosed '{' on line 15
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('visiteur/connex...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('visiteur/connex...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-01-05 08:29:54 --> Undefined variable $txtMdp
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\visiteur\s_enregistrer.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 25)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/s_enre...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(300): view('visiteur/s_enre...', Array)
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-01-05 08:30:42 --> Undefined variable $txtMdp
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\visiteur\s_enregistrer.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 25)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/s_enre...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(300): view('visiteur/s_enre...', Array)
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-01-05 08:30:45 --> Undefined variable $txtMdp
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\visiteur\s_enregistrer.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 25)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/s_enre...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(300): view('visiteur/s_enre...', Array)
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-01-05 08:31:12 --> Undefined variable $txtMdp
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\visiteur\s_enregistrer.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 25)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/s_enre...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(300): view('visiteur/s_enre...', Array)
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}

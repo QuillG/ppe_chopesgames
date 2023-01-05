@@ -23,9 +23,9 @@ class Visiteur extends BaseController
         $modelMarq = new ModeleMarque();
         $data['marques'] = $modelMarq->retourner_marques();
 
-        echo view('templates/header', $data);
-        echo view('visiteur/accueil');
-        echo view('templates/footer');
+        Return view('templates/header', $data).
+        view('visiteur/accueil').
+        view('templates/footer');
     }
 
 
@@ -47,9 +47,9 @@ class Visiteur extends BaseController
         $modelMarq = new ModeleMarque();
         $data['marques'] = $modelMarq->retourner_marques();
 
-        echo view('templates/header', $data);
-        echo view("visiteur/lister_les_produits");
-        echo view('templates/footer');
+        Return view('templates/header', $data).
+        view("visiteur/lister_les_produits").
+        view('templates/footer');
     }
 
     public function lister_les_produits_parmarque($nomarque = false)
@@ -70,9 +70,9 @@ class Visiteur extends BaseController
             $data["lesProduits"] = $modelProd->retouner_produits_marque($nomarque)->paginate(12);
             $data['pager'] = $modelProd->pager;
             
-            echo view('templates/header', $data);
-            echo view("visiteur/lister_les_produits");
-            echo view('templates/footer');
+            Return view('templates/header', $data).
+            view("visiteur/lister_les_produits").
+            view('templates/footer');
         }
     }
 
@@ -93,9 +93,9 @@ class Visiteur extends BaseController
             $data["lesProduits"] = $modelProd->retouner_produits_categorie($nocategorie)->paginate(12);
             $data['pager'] = $modelProd->pager;
      
-      echo view('templates/header', $data);
-      echo view("visiteur/lister_les_produits");
-      echo view('templates/footer');
+      Return view('templates/header', $data).
+      view("visiteur/lister_les_produits").
+      view('templates/footer');
       } 
    }
 
@@ -120,9 +120,9 @@ class Visiteur extends BaseController
         $modelMarq = new ModeleMarque();
         $data['marque'] = $modelMarq->retourner_marques($marque);
 
-        echo view('templates/header', $data);
-        echo view('visiteur/voir_un_produit');
-        echo view('templates/footer');
+        Return view('templates/header', $data).
+        view('visiteur/voir_un_produit').
+        view('templates/footer');
     }
 
     public function ajouter_au_panier($noProduit)
@@ -174,9 +174,9 @@ class Visiteur extends BaseController
         if ($session->has('cart'))
             $data['items'] = array_values(session('cart'));
         else $data['items'] = array();
-        echo view('templates/header', $data);
-        echo view('visiteur/afficher_panier');
-        echo view('templates/footer');
+        Return view('templates/header', $data).
+        view('visiteur/afficher_panier').
+        view('templates/footer');
     }
 
     function suppression_item_panier($id = '')
@@ -222,7 +222,8 @@ class Visiteur extends BaseController
             'txtVille'    => 'required',
             'txtCP' => 'required',
             'txtEmail' => 'required|valid_email|is_unique[client.EMAIL,id,{id}]',
-            'txtMdp'    => 'required|min_length[4]'
+            'txtMdp'    => 'required|min_length[10]',
+            'confirmMdp' => 'required|matches[txtMdp]',
         ];
 
         if (!empty($session->get('statut'))) //régles de validation pour modification
@@ -252,10 +253,14 @@ class Visiteur extends BaseController
             'txtMdp'    => [
                 'required' => 'Un mot de passe est requis',
                 'min_length' => 'Mot de passe trop petit',
-            ]];
+            ],
+            'confirmMdp' => [
+                'required' => 'Le mot de passe doit etre confirmer',
+                'matches' => 'Le mot de passe n\'est pas identique'
+            ]
+        ];
         $modelCat = new ModeleCategorie();
         $data_bis['categories'] = $modelCat->retourner_categories();
-        echo view('templates/header', $data_bis);
         $modelCli = new ModeleClient();
 
         if (!$this->validate($rules, $messages)) {
@@ -297,48 +302,34 @@ class Visiteur extends BaseController
                 else $data['TitreDeLaPage'] = "Sorry";
             }
         }
-        echo view('visiteur/s_enregistrer', $data);
-        echo view('templates/footer');
+        Return view('templates/header', $data).
+        view('visiteur/s_enregistrer', $data).
+        view('templates/footer');
     }
 
     public function se_connecter()
     {
         helper(['form']);
-        $validation =  \Config\Services::validation();
         $session = session();
-        $data['TitreDeLaPage'] = 'Se connecter';
+        //$data['TitreDeLaPage'] = 'Se connecter';
         $rules = [ //régles de validation
             'txtEmail' => 'required|valid_email|is_not_unique[client.EMAIL,id,{id}]',
             'txtMdp'   => 'required|is_not_unique[client.MOTDEPASSE,id,{id}]'
         ];
 
-        $messages = [ //message à renvoyer en cas de non respect des règles de validation
-            'txtEmail' => [
-                'required' => 'Un Email est requis',
-                'valid_email' => 'Un Email valide est requis',
-                'is_not_unique' => 'Mot de passe ou E-mail incorrect',
-            ],
-            'txtMdp' => [
-                'required' => 'Un mot de passe est requis',
-                'is_not_unique' => 'Mot de passe ou E-mail incorrect',
-            ]
-            
-        ];
+    
+
+        $data['TitreDeLaPage'] = "Corriger votre formulaire";
         $modelCat = new ModeleCategorie();
-        $data_bis['categories'] = $modelCat->retourner_categories();
-        echo view('templates/header', $data_bis);
-        if (!$this->validate($rules, $messages)) {
-            if ($_POST) //if ($this->request->getMethod()=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
-                $data['TitreDeLaPage'] = "Corriger votre formulaire";
-            else   $data['TitreDeLaPage'] = "Se connecter";
-            echo view('visiteur/se_connecter', $data); // sinon premier affichage
+        $data['categories'] = $modelCat->retourner_categories();
+        if (!$this->validate($rules)) {
+            if ($this->request->getMethod()!=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
+                $data['TitreDeLaPage'] = "Se connecter"; // sinon premier affichage
         } else {
             $modelCli = new ModeleClient();
             $Identifiant = esc($this->request->getPost('txtEmail'));
             $MdP = esc($this->request->getPost('txtMdp'));
-
             $UtilisateurRetourne = $modelCli->retourner_clientParMail($Identifiant);
-
             if (!$UtilisateurRetourne == null) {
                 // if (password_verify($MdP,$UtilisateurRetourne->MOTDEPASSE))
                 // PAS D'ENCODAGE DU MOT DE PASSE POUR FACILITATION OPERATIONS DE TESTS (ENCODAGE A FAIRE EN PRODUCTION!)
@@ -349,52 +340,34 @@ class Visiteur extends BaseController
                     $session->set('id', $UtilisateurRetourne["NOCLIENT"]);
                     $session->set('statut', 1);
                     return redirect()->to('Visiteur/accueil');
-                } else {
-                    $data['TitreDeLaPage'] = 'Mot de passe incorrect';
-                    echo view('visiteur/se_connecter', $data);
-                }
-            } else {
-                $data['TitreDeLaPage'] = 'Adresse E-mail incorrecte';
-                echo view('visiteur/se_connecter', $data);
-            }
+                } 
+            } 
         }
-        echo view('templates/footer');
+        Return view('templates/header', $data).
+        view('visiteur/se_connecter', $data).
+        view('templates/footer');
     }
-
     public function connexion_administrateur()
     {
         helper(['form']);
-        $validation =  \Config\Services::validation();
         $session = session();
-
         $rules = [ //régles de validation
             'txtIdentifiant' => 'required',
             'txtMotDePasse'   => 'required'
         ];
-        $messages = [ //message à renvoyer en cas de non respect des règles de validation
-            'txtIdentifiant' => [
-                'required' => 'Un identifiant est requis',
-            ],
-            'txtMotDePasse'    => [
-                'required' => 'Un mot de passe est requis',
-            ]
-        ];
-
+       
+        $data['TitreDeLaPage'] = "Corriger votre formulaire";
         $modelCat = new ModeleCategorie();
-        $data_bis['categories'] = $modelCat->retourner_categories();
-        echo view('templates/header', $data_bis);
-        if (!$this->validate($rules, $messages)) {
-            if ($_POST) //if ($this->request->getMethod()=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
-                $data['TitreDeLaPage'] = "Corriger votre formulaire";
-            else   $data['TitreDeLaPage'] = "Se connecter";
-            echo view('visiteur/connexion_administrateur', $data); // sinon premier affichage
-
+        $data['categories'] = $modelCat->retourner_categories();
+        if (!$this->validate($rules)) {
+            if ($this->request->getMethod()!=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
+                $data['TitreDeLaPage'] = "Se connecter";
+             // sinon premier affichage
         } else { //validation ok
             $modelAdm = new ModeleAdministrateur();
             $Identifiant = esc($this->request->getPost('txtIdentifiant'));
             $MdP = esc($this->request->getPost('txtMotDePasse'));
             $adminRetourne = $modelAdm->retourner_administrateur_par_id($Identifiant);
-
             if (!$adminRetourne == null) {
                 //  if (password_verify($MdP,$adminRetourne->MOTDEPASSE))
                 // PAS D'ENCODAGE DU MOT DE PASSE POUR FACILITATION OPERATIONS DE TESTS (ENCODAGE A FAIRE EN PRODUCTION!)
@@ -410,15 +383,11 @@ class Visiteur extends BaseController
                         $session->set('statut', 3);
                     }
                     return redirect()->to('Visiteur/accueil');
-                } else {
-                    $data['TitreDeLaPage'] = 'Mot de passe incorrect';
-                    echo view('visiteur/connexion_administrateur', $data);
-                }
-            } else {
-                $data['TitreDeLaPage'] = 'Identifiant incorrecte';
-                echo view('visiteur/connexion_administrateur', $data);
-            }
-            echo view('templates/footer');
+                } 
+            } 
         }
+    Return view('templates/header', $data).
+    view('visiteur/connexion_administrateur').
+    view('templates/footer');
     }
 }
