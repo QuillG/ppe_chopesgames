@@ -192,6 +192,31 @@ class Visiteur extends BaseController
         return redirect()->to('Visiteur/afficher_panier');
     }
 
+    public function prodById(int $id){
+        $modelProd = new ModeleProduit();
+        $slug= $modelProd->retournerSlug($id);
+    //redirection   
+        if ($slug != null){ 
+        return redirect()->to('jeux/'.$slug['NOMIMAGE']);
+        }
+        else
+        echo $id;
+    //else redirect 404 adaptée ?
+      }
+      
+public function prodBySlug($slug){
+        $modelProd = new ModeleProduit();
+        $id= $modelProd->retournerId($slug);
+    //pas de redirection mais invocation de la méthode déjà programmée     
+        if ($id != null){ 
+        return $this->voir_un_produit($id);
+        }
+        else
+        echo $id;
+    //else redirect 404 adaptée ?
+      }
+
+
     public function mise_a_jour_panier()
     {
         $session = session();
@@ -390,4 +415,5 @@ class Visiteur extends BaseController
     view('visiteur/connexion_administrateur').
     view('templates/footer');
     }
+
 }

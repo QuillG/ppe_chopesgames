@@ -1,0 +1,55 @@
+CRITICAL - 2023-01-12 04:36:43 --> syntax error, unexpected token ":", expecting end of file
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#4 {main}
+CRITICAL - 2023-01-12 04:50:01 --> App\Controllers\Visiteur::prodById(): Argument #1 ($id) must be of type int, string given, called in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php on line 824
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->prodById('$1')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-01-12 04:50:59 --> App\Controllers\Visiteur::prodById(): Argument #1 ($id) must be of type int, string given, called in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php on line 824
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->prodById('$1')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-01-12 04:53:10 --> App\Controllers\Visiteur::prodById(): Argument #1 ($id) must be of type int, string given, called in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php on line 824
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->prodById('$1')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-01-12 04:54:07 --> App\Controllers\Visiteur::prodById(): Argument #1 ($id) must be of type int, string given, called in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php on line 824
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->prodById('$1')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-01-12 04:54:27 --> App\Controllers\Visiteur::prodById(): Argument #1 ($id) must be of type int, string given, called in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php on line 824
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->prodById('$1')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-01-12 04:56:15 --> App\Controllers\Visiteur::prodById(): Argument #1 ($id) must be of type int, string given, called in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php on line 824
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->prodById('$1')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-01-12 05:00:37 --> App\Controllers\Visiteur::prodById(): Argument #1 ($id) must be of type int, string given, called in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php on line 824
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->prodById('$1')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
