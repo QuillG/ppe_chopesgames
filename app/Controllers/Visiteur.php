@@ -203,6 +203,18 @@ class Visiteur extends BaseController
         echo $id;
     //else redirect 404 adaptée ?
       }
+
+      public function prodByIdBis(int $id){
+        $modelProd = new ModeleProduit();
+        $slugMarq= $modelProd->retournerMarqueSlug($id);
+        if ($slugMarq != null) { 
+        return redirect()->to('game/'.$slugMarq['NOM'].'/'.$slugMarq['NOMIMAGE']);
+        
+        }
+        else
+        echo $slugMarq;
+    //else redirect 404 adaptée ?
+      }
       
 public function prodBySlug($slug){
         $modelProd = new ModeleProduit();

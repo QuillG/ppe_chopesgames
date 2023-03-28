@@ -9,26 +9,24 @@ if ($session->has('cart')) {
 <head>
     <title>ChopesGames</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/images/favicon.ico')?>">
-    <link rel="alternate" type="application/rss+XML" title="ChopesGames" href="<?php echo site_url('AdministrateurSuper/flux_rss') ?>" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url('assets/images/favicon.ico')?>">
+    <link rel="alternate" type="application/rss+XML" title="ChopesGames" href="<?php echo base_url('AdministrateurSuper/flux_rss') ?>" />
     <link rel="stylesheet" href="<?php echo css_url('bootstrap.min') ?>">
 </head>
 <body>
     
     <nav class="navbar navbar-light bg-danger col-12">
         <div class="container-fluid justify-content-start">
-            <a class="navbar-brand h5 link-dark justify-content-start" href="<?php echo site_url('Visiteur/accueil') ?>">
-                <img class="d-inline-block" width=75 height=70 src="<?php echo base_url('/assets/images/game-center.png')?>"
+            <a class="navbar-brand h5 link-dark justify-content-start" href="<?php echo base_url('Visiteur/accueil') ?>">
+                <img class="d-inline-block" width=75 height=70 src="<?php echo site_url('/assets/images/game-center.png')?>"
                     alt="Logo">Chope Games
                 </a>
-            <a class="nav-link active h5 link-dark" href="<?php echo site_url('Visiteur/lister_les_produits') ?>">Notre catalogue</a>
-            <form class="d-flex col-5" role="search" method="post" action="<?php echo site_url('Visiteur/lister_les_produits') ?>">
+            <a class="nav-link active h5 link-dark" href="<?php echo base_url('Visiteur/lister_les_produits') ?>">Notre catalogue</a>
+            <form class="d-flex col-5" role="search" method="post" action="<?php echo base_url('Visiteur/lister_les_produits') ?>">
                         <input class="form-control me-2" type="search" placeholder="search" name="search" id='search' aria-label="Search">
-                        <button class="btn btn-danger btn-outline-dark" type="submit"><img src="/assets/images/Loupe.png" class="d-inline-block" width="25" height="25" alt=""></button>
-            <div class="container-fluid justify-content-end col">
-            
-                
-                    <a href="<?php echo site_url('Visiteur/afficher_panier') ?>" class="btn btn-dark btn-md me-2">
+                        <button class="btn btn-danger btn-outline-dark" type="submit"><img class="bi bi-search" src="<?php echo site_url('/assets/images/search.svg')?>"></button>
+            <div class="container-fluid justify-content-end col">                            
+                    <a href="<?php echo base_url('Visiteur/afficher_panier') ?>" class="btn btn-dark btn-md me-2">
                         <span class="fas fa-shopping-cart"><?php if ($nb > 0) echo "($nb)" ?></span>
                     </a>
                 </li>
