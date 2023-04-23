@@ -5,21 +5,27 @@
                     <div class="col-md-12 container">
                         <?php  echo form_open('Visiteur/se_connecter') ?>
                         <br>
-                            <h3 class="text-center text-primary"><?php echo $TitreDeLaPage ?></h3>                         
+                            <?php $validation = \Config\Services::validation(); ?>
+                            <h3 class="text-center text-primary"><?php echo $TitreDeLaPage ?></h3>
+                            <h5 class="text-center text-primary"><?php echo $Time ?></h5>
+                            <?PHP if($TitreDeLaPage=='Corriger votre formulaire') {
+                                echo service('validation')->getError("txtEmail"); 
+                                if(service('validation')->getError("txtEmail")=='') {
+                                    echo service('validation')->getError("txtMdp");
+                                }
+                            }
+                            ?>
                             <div>
-                                <?php echo csrf_field();
-                                      echo form_label('Email','txtEmail',['class'=>'text-primary']);
-                                      echo form_input('txtEmail', set_value('txtEmail'),['placeholder' => 'Votre Email', 'class'=>'form-control'], 'email');
-                                      echo csrf_field();?>
+                                <?php echo form_input('txtEmail', set_value('txtEmail'),['placeholder' => 'Email', 'class'=>'form-control'], 'email');?> <br/>
                             </div>
                             <div>
-                            <?php
-                                      echo form_label('Mot de passe','txtMdp',['class'=>'text-primary']);
-                                      echo form_input('txtMdp', set_value('txtMdp'),['placeholder' => 'Votre Mot de passe', 'class'=>'form-control', 'id'=>'mdp'], 'password');
-                                      echo form_checkbox('password','accept',false,'onclick = Affichermasquermdp()')?>Afficher le mot de passe
+                                <?php 
+                                echo form_input('txtMdp', set_value('txtMdp'),['placeholder' => 'Mot de passe', 'class'=>'form-control', 'id'=>'mdp'], 'password');
+                                echo form_checkbox('password', 'accept', false, 'onclick = Affichermasquermdp()');?>Afficher mot de passe
                             </div>
-                            <?php
-                            echo form_input('submit', 'Valider',['class'=>'btn btn-primary btn-md'], 'submit');?>  
+                            <?php echo form_submit('submit', 'Valider',['class'=>'btn btn-primary','id'=>'connect'], 'submit'); ?>
+                            <div class="text-primary right">
+                            <a class="btn btn-primary" href="<?php echo site_url('Visiteur/s_enregistrer') ?>">Crée un compte</a>
                             </div>
                         </form>
                     </div>

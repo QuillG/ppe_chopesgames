@@ -46,6 +46,7 @@ class Visiteur extends BaseController
         $data['categories'] = $modelCat->retourner_categories();
         $modelMarq = new ModeleMarque();
         $data['marques'] = $modelMarq->retourner_marques();
+    
 
         Return view('templates/header', $data).
         view("visiteur/lister_les_produits").
@@ -249,7 +250,7 @@ public function prodBySlug($slug){
         helper(['form']);
         $validation =  \Config\Services::validation();
         $data['TitreDeLaPage'] = "S'enregister";
-        $session = session();
+        $session = \Config\Services::session();
 
 
         $rules = [ //régles de validation creation
@@ -348,20 +349,39 @@ public function prodBySlug($slug){
     {
         helper(['form']);
         $session = session();
-        //$data['TitreDeLaPage'] = 'Se connecter';
+        $throttler = \Config\Services::throttler();
+        $co = $throttler->check('connexion', 6, HOUR);
+        $data['TitreDeLaPage'] = 'Se connecter';
+        $data['Time'] = '';
         $rules = [ //régles de validation
             'txtEmail' => 'required|valid_email|is_not_unique[client.EMAIL,id,{id}]',
             'txtMdp'   => 'required|is_not_unique[client.MOTDEPASSE,id,{id}]'
         ];
 
-    
-
-        $data['TitreDeLaPage'] = "Corriger votre formulaire";
+        $messages = [ //message à renvoyer en cas de non respect des règles de validation
+            'txtEmail' => [
+                'required' => 'Email ou mot de passe incorrect',
+                'valid_email' => 'Email ou mot de passe incorrect',
+                'is_not_unique' => 'Email ou mot de passe incorrect',
+            ],
+            'txtMdp'    => [
+                'required' => 'Email ou mot de passe incorrect',
+                'is_not_unique' => 'Email ou mot de passe incorrect',
+            ]
+        ];
         $modelCat = new ModeleCategorie();
         $data['categories'] = $modelCat->retourner_categories();
-        if (!$this->validate($rules)) {
-            if ($this->request->getMethod()!=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
-                $data['TitreDeLaPage'] = "Se connecter"; // sinon premier affichage
+        // return view('templates/header', $data_bis);
+        if (!$this->validate($rules, $messages) || !$this->validate($rules, $messages) && $co == false || $co == false) {
+            if ($_POST)
+            {
+                $data['TitreDeLaPage'] = "Corriger votre formulaire";  
+            } //if ($this->request->getMethod()=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
+            if (!$co){
+                $data['TitreDeLaPage'] = "Tentative trop importante";
+                $data['Time'] = "Temps restant avant tentative : ". strval($throttler->getTokenTime()). "(s)\n"."au bout de 6 tentatives le ";
+            }
+            else   $data['TitreDeLaPage'] = "Se connecter";
         } else {
             $modelCli = new ModeleClient();
             $Identifiant = esc($this->request->getPost('txtEmail'));
@@ -377,10 +397,14 @@ public function prodBySlug($slug){
                     $session->set('id', $UtilisateurRetourne["NOCLIENT"]);
                     $session->set('statut', 1);
                     return redirect()->to('Visiteur/accueil');
-                } 
-            } 
+                } else {
+                    $data['TitreDeLaPage'] = 'Mot de passe incorrect';
+                }
+            } else {
+                $data['TitreDeLaPage'] = 'Adresse E-mail incorrecte';
+            }
         }
-        Return view('templates/header', $data).
+        return view('templates/header', $data).
         view('visiteur/se_connecter', $data).
         view('templates/footer');
     }
@@ -419,6 +443,8 @@ public function prodBySlug($slug){
                     } elseif ($adminRetourne["PROFIL"] == 'Super') {
                         $session->set('statut', 3);
                     }
+                    print_r($Identifiant , $MdP);
+                    exit();
                     return redirect()->to('Visiteur/accueil');
                 } 
             } 

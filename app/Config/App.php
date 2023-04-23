@@ -23,7 +23,8 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    // public $baseURL = 'https://quentin.greta22sio.fr/ChopesGames/public/';
+    public $baseURL = 'http://localhost:8080';
 
     /**
      * --------------------------------------------------------------------------

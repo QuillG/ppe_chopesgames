@@ -1,30 +1,90 @@
-CRITICAL - 2023-01-13 09:58:29 --> fwrite(): Write of 76 bytes failed with errno=22 Invalid argument
-#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'fwrite(): Write...', 'C:\\Users\\Propri...', 993)
-#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CLI.php(993): fwrite(Resource id #2, '\e[0;32mCodeIgni...')
-#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CLI.php(364): CodeIgniter\CLI\CLI::fwrite(Resource id #2, '\e[0;32mCodeIgni...')
-#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\Serve.php(97): CodeIgniter\CLI\CLI::write('\e[0;32mCodeIgni...', 'green')
-#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\Serve.php(114): CodeIgniter\Commands\Server\Serve->run(Array)
-#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\Commands.php(63): CodeIgniter\Commands\Server\Serve->run(Array)
-#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CommandRunner.php(70): CodeIgniter\CLI\Commands->run('serve', Array)
-#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CommandRunner.php(56): CodeIgniter\CLI\CommandRunner->index(Array)
-#8 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(822): CodeIgniter\CLI\CommandRunner->_remap('index', 'serve')
-#9 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
-#10 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
-#12 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\spark(63): CodeIgniter\CLI\Console->run()
-#13 {main}
-CRITICAL - 2023-01-13 09:58:29 --> Uncaught ErrorException: fwrite(): Write of 2 bytes failed with errno=22 Invalid argument in C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CLI.php:993
-Stack trace:
-#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'fwrite(): Write...', 'C:\\Users\\Propri...', 993)
-#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CLI.php(993): fwrite(Resource id #2, '\r\n')
-#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CLI.php(364): CodeIgniter\CLI\CLI::fwrite(Resource id #2, '\r\n')
-#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CLI\CLI.php(441): CodeIgniter\CLI\CLI::write()
-#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Views\errors\cli\error_exception.php(6): CodeIgniter\CLI\CLI::newLine()
-#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Debug\Exceptions.php(229): include('C:\\Users\\Propri...')
-#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Debug\Exceptions.php(232): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
-#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Debug\Exceptions.php(116): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
-#8 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
-#9 {main}
-  thrown
-#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
-#1 {main}
+ERROR - 2023-01-13 07:16:34 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+CRITICAL - 2023-01-13 07:16:34 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+#0 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query()
+#4 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Models/ModeleProduit.php(60): CodeIgniter\BaseModel->first()
+#7 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Controllers/Visiteur.php(209): App\Models\ModeleProduit->retournerMarqueSlug()
+#8 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(824): App\Controllers\Visiteur->prodByIdBis()
+#9 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#10 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-13 07:16:39 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+CRITICAL - 2023-01-13 07:16:39 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+#0 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query()
+#4 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Models/ModeleProduit.php(60): CodeIgniter\BaseModel->first()
+#7 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Controllers/Visiteur.php(209): App\Models\ModeleProduit->retournerMarqueSlug()
+#8 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(824): App\Controllers\Visiteur->prodByIdBis()
+#9 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#10 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-13 07:16:49 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+CRITICAL - 2023-01-13 07:16:49 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+#0 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query()
+#4 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Models/ModeleProduit.php(60): CodeIgniter\BaseModel->first()
+#7 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Controllers/Visiteur.php(209): App\Models\ModeleProduit->retournerMarqueSlug()
+#8 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(824): App\Controllers\Visiteur->prodByIdBis()
+#9 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#10 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-13 07:21:55 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+CRITICAL - 2023-01-13 07:21:55 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+#0 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query()
+#4 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Models/ModeleProduit.php(60): CodeIgniter\BaseModel->first()
+#7 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Controllers/Visiteur.php(209): App\Models\ModeleProduit->retournerMarqueSlug()
+#8 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(824): App\Controllers\Visiteur->prodByIdBis()
+#9 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#10 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-13 07:22:05 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+CRITICAL - 2023-01-13 07:22:05 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+#0 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query()
+#4 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Models/ModeleProduit.php(60): CodeIgniter\BaseModel->first()
+#7 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Controllers/Visiteur.php(209): App\Models\ModeleProduit->retournerMarqueSlug()
+#8 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(824): App\Controllers\Visiteur->prodByIdBis()
+#9 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#10 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-13 07:22:08 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+CRITICAL - 2023-01-13 07:22:08 --> Table 'aspt1556_chopesgames.MARQUE' doesn't exist
+#0 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query()
+#4 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Models/ModeleProduit.php(60): CodeIgniter\BaseModel->first()
+#7 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/app/Controllers/Visiteur.php(209): App\Models\ModeleProduit->retournerMarqueSlug()
+#8 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(824): App\Controllers\Visiteur->prodByIdBis()
+#9 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#10 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/aspt1556/quentin.greta22sio.fr/ChopesGames/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}

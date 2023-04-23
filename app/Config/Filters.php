@@ -19,6 +19,7 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
+        'throttle' => \App\Filters\Throttle::class,
     ];
 
     /**
@@ -29,12 +30,12 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
-            // 'honeypot',
-            // 'csrf',
+            'honeypot',
+            'csrf',
         ],
         'after' => [
             'toolbar',
-            // 'honeypot',
+            'honeypot',
         ],
     ];
 
@@ -47,7 +48,8 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $methods = [];
+    public $methods = [ 'post' => ['throttle'],];
+       
 
     /**
      * List of filter aliases that should run on any
