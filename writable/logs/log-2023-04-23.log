@@ -1,0 +1,12 @@
+CRITICAL - 2023-04-23 10:37:08 --> Undefined variable $session
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\visiteur\s_enregistrer.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 32)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('visiteur/s_enre...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\Visiteur.php(344): view('visiteur/s_enre...', Array)
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}

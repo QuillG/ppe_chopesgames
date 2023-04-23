@@ -13,12 +13,18 @@ if ($session->has('cart')) {
     <link rel="alternate" type="application/rss+XML" title="ChopesGames" href="<?php echo base_url('AdministrateurSuper/flux_rss') ?>" />
     <link rel="stylesheet" href="<?php echo css_url('bootstrap.min') ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" href="<?php echo site_url('/assets/css/style.css'); ?>">
+    <head>
+    <meta charset="utf-8">
+    <title>Ma page</title>
+    
+</head>
+
 </head>
 <body>
-    <nav class="navbar navbar-light bg-danger col-12">
+    <nav class="navbar navbar-light bg-danger col-12" id="nav">
         <div class="justify-content-start d-flex flex-nowrap align-items-center col">
-            <a class="navbar-brand h5 link-dark justify-content-start" href="<?php echo base_url('Visiteur/accueil') ?>">
+            <a class="navbar-brand h5 link-dark justify-content-start pt-2" href="<?php echo base_url('Visiteur/accueil') ?>">
                 <img class="d-inline-block" width=75 height=70 src="<?php echo site_url('/assets/images/game-center.png')?>"
                     alt="Logo">Chope Games
                 </a>
@@ -33,7 +39,7 @@ if ($session->has('cart')) {
                             </svg></button>
             </form>
         </div>
-        <div class="container-fluid justify-content-end col">      
+        <div class="container-fluid justify-content-end col me-4">      
                     <a href="<?php echo base_url('Visiteur/afficher_panier') ?>" class="btn btn-danger btn-outline-dark btn-md me-2">
                         <span><i class="bi bi-cart"></i><?php if ($nb > 0) echo "($nb)" ?></span>
                     </a>

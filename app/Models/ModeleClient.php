@@ -27,4 +27,13 @@ class ModeleClient extends Model
   return $this->findAll();
    } 
 
+   public function anonymiser_client($noclient =false){
+
+    return $this->builder()->set('MOTDEPASSE' , '' , 'EMAIL' , "" , 'CODEPOSTAL' , "" , 'VILLE' , "", 'ADRESSE' , "" , 'PRENOM' , "" , 'NOM' , "")
+                            ->where('NOCLIENT')
+                            ->update();
+   }
+
+   
+
 }

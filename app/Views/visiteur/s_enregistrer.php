@@ -1,4 +1,4 @@
-
+    <?php $session = session();?>
     <div>
         <div class="container">
             <div class="row justify-content-center align-items-center">
@@ -26,10 +26,33 @@
                                       echo '<br>';
                                       echo form_input('confirmMdp', set_value('confirmMdp'),['placeholder' => 'Confirmez mot de passe', 'class'=>'form-control'],'password');
                                       echo '<br>';?>
-                                                                             
-                            <input type="submit" name="submit" class="btn btn-primary btn-md" value="Valider">
+                            <div class="d-flex flex-nowrap justify-content-between">
+                            <input type="submit" name="submit" class="btn btn-danger btn-md" value="Valider">
                             <div class="text-primary right">
-                            <a class="btn btn-primary" href="<?php echo site_url('Visiteur/se_connecter') ?>">Se connecter</a>
+                            <?php if($txtNom == '') { ?>   
+                                <a class="btn btn-outline-danger" href="<?php echo site_url('Visiteur/se_connecter') ?>">Se connecter</a>
+                            <?php }
+                            else { ?> 
+                                <a class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Exercer mon droit à l'oubli</a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Exercer mon droit à l'oubli ?</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            Le droit a l'oubli permet a l'ultilisateur d'effacer toutes ces informations de notre site, cette action entrainera une suppresion de votre profils utilisateur, vous serez donc deconnecter définitivement et rediriger vers l'accueil.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fermer</button>
+                                            <button type="button" href="<?php echo site_url('Visiteur/RGPD') ?>" class="btn btn-danger">Sauvegarder</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            <?php }?>
+                            </div>                                                
                             </div>
                         </form>
                     </div>

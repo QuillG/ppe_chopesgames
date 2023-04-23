@@ -316,6 +316,7 @@ public function prodBySlug($slug){
                     $data['txtVille'] = $compte['VILLE'];
                     $data['txtCP'] = $compte['CODEPOSTAL'];
                     $data['txtEmail'] = $compte['EMAIL'];
+                    $data['status'] = $session->get('status');
                 }
             }
         } else {  // envoi d'une modification de compte (email et mdp aussi ? A VOIR...) ou enregistrement
@@ -452,6 +453,18 @@ public function prodBySlug($slug){
     Return view('templates/header', $data).
     view('visiteur/connexion_administrateur').
     view('templates/footer');
+    }
+
+    public function RGPD() {
+        $modelCli = new ModeleClient();
+        $Identifiant = esc($this->request->getPost('txtEmail'));
+        $MdP = esc($this->request->getPost('txtMdp'));
+        $UtilisateurRetourne = $modelCli->retourner_clientParMail($Identifiant);
+        $UtilisateurRetourne->anonymiser_client();
+        $session = session();
+        $session->destroy();
+        return redirect()->to('Visiteur/accueil');
+
     }
 
 }
