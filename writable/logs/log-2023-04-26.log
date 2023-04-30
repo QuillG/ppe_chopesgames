@@ -1,0 +1,169 @@
+CRITICAL - 2023-04-26 03:26:10 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 03:31:25 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 03:44:43 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 03:47:35 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 03:59:59 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 04:13:30 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:46:07 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:48:38 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:51:36 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:51:50 --> str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'str_replace(): ...', 'C:\\Users\\Propri...', 438)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\HTTP\ResponseTrait.php(438): str_replace(Array, '', NULL)
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(389): CodeIgniter\HTTP\Response->send()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-04-26 12:52:03 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:53:01 --> Call to a member function update() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:56:15 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:58:13 --> str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'str_replace(): ...', 'C:\\Users\\Propri...', 438)
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\HTTP\ResponseTrait.php(438): str_replace(Array, '', NULL)
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(389): CodeIgniter\HTTP\Response->send()
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-04-26 12:58:18 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:59:05 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 12:59:18 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 13:02:12 --> syntax error, unexpected token "}", expecting ";"
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Propri...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Mode...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(302): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Mode...')
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-04-26 13:02:18 --> syntax error, unexpected token "}", expecting ";"
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Propri...')
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Mode...')
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\app\Controllers\Visiteur.php(302): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Mode...')
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#5 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-04-26 13:02:40 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 13:04:54 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 13:05:41 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-04-26 13:07:03 --> Call to a member function anonymiser_client() on array
+#0 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(824): App\Controllers\Visiteur->RGPD()
+#1 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#2 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\PPEShopGame\ChopesGames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}

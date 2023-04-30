@@ -350,8 +350,6 @@ public function prodBySlug($slug){
     {
         helper(['form']);
         $session = session();
-        $throttler = \Config\Services::throttler();
-        $co = $throttler->check('connexion', 6, HOUR);
         $data['TitreDeLaPage'] = 'Se connecter';
         $data['Time'] = '';
         $rules = [ //régles de validation
@@ -373,22 +371,18 @@ public function prodBySlug($slug){
         $modelCat = new ModeleCategorie();
         $data['categories'] = $modelCat->retourner_categories();
         // return view('templates/header', $data_bis);
-        if (!$this->validate($rules, $messages) || !$this->validate($rules, $messages) && $co == false || $co == false) {
+        if (!$this->validate($rules, $messages)) {
             if ($_POST)
             {
                 $data['TitreDeLaPage'] = "Corriger votre formulaire";  
             } //if ($this->request->getMethod()=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
-            if (!$co){
-                $data['TitreDeLaPage'] = "Tentative trop importante";
-                $data['Time'] = "Temps restant avant tentative : ". strval($throttler->getTokenTime()). "(s)\n"."au bout de 6 tentatives le ";
-            }
             else   $data['TitreDeLaPage'] = "Se connecter";
         } else {
             $modelCli = new ModeleClient();
             $Identifiant = esc($this->request->getPost('txtEmail'));
             $MdP = esc($this->request->getPost('txtMdp'));
             $UtilisateurRetourne = $modelCli->retourner_clientParMail($Identifiant);
-            if (!$UtilisateurRetourne == null) {
+            if (!$UtilisateurRetourne == null){
                 // if (password_verify($MdP,$UtilisateurRetourne->MOTDEPASSE))
                 // PAS D'ENCODAGE DU MOT DE PASSE POUR FACILITATION OPERATIONS DE TESTS (ENCODAGE A FAIRE EN PRODUCTION!)
                 if ($MdP == $UtilisateurRetourne["MOTDEPASSE"]) {
@@ -399,10 +393,10 @@ public function prodBySlug($slug){
                     $session->set('statut', 1);
                     return redirect()->to('Visiteur/accueil');
                 } else {
-                    $data['TitreDeLaPage'] = 'Mot de passe incorrect';
+                    $data['TitreDeLaPage'] = 'Identifiant ou mot de passe incorrect';
                 }
             } else {
-                $data['TitreDeLaPage'] = 'Adresse E-mail incorrecte';
+                $data['TitreDeLaPage'] = 'Identifiant ou mot de passe incorrect';
             }
         }
         return view('templates/header', $data).
@@ -456,11 +450,26 @@ public function prodBySlug($slug){
     }
 
     public function RGPD() {
+        helper(['form']);
+        $session = session();
+        $rules = [ //régles de validation
+            'txtMotDePasse'   =>'required'
+        ];
         $modelCli = new ModeleClient();
         $Identifiant = esc($this->request->getPost('txtEmail'));
-        $MdP = esc($this->request->getPost('txtMdp'));
+        $MdP = esc($this->request->getPost('MdpDroitALoubli'));
         $UtilisateurRetourne = $modelCli->retourner_clientParMail($Identifiant);
-        $UtilisateurRetourne->anonymiser_client();
+        $id = $UtilisateurRetourne['NOCLIENT'];
+        $UtilisateurRetourne = [
+            'MOTDEPASSE' => "" ,
+            'EMAIL' => "" ,
+            'CODEPOSTAL' => "" ,
+            'VILLE' => "",
+            'ADRESSE' => "", 
+            'PRENOM' => "" ,
+            'NOM' => "",
+        ];
+        $modelCli->update($id, $UtilisateurRetourne);
         $session = session();
         $session->destroy();
         return redirect()->to('Visiteur/accueil');

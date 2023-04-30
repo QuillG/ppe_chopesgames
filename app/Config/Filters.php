@@ -20,6 +20,7 @@ class Filters extends BaseConfig
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
         'throttle' => \App\Filters\Throttle::class,
+        'secureheaders' => \App\Filters\SecureHeaders::class,
     ];
 
     /**

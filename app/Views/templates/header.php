@@ -11,11 +11,11 @@ if ($session->has('cart')) {
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url('/assets/images/game-center.png')?>">
     <link rel="alternate" type="application/rss+XML" title="ChopesGames" href="<?php echo base_url('AdministrateurSuper/flux_rss') ?>" />
-    <link rel="stylesheet" href="<?php echo css_url('bootstrap.min') ?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="<?php echo site_url('/assets/css/style.css'); ?>">
+    <link  {csp-style-nonce} rel="stylesheet" href="<?php echo css_url('bootstrap.min') ?>">
+    <link  {csp-style-nonce} rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" nonce>
+    <link  {csp-style-nonce} rel="stylesheet" href="<?php echo site_url('/assets/css/style.css'); ?>" nonce>
+    
     <head>
-    <meta charset="utf-8">
     <title>Ma page</title>
     
 </head>
@@ -29,6 +29,14 @@ if ($session->has('cart')) {
                     alt="Logo">Chope Games
                 </a>
             <a class="nav-link active h5 link-dark" href="<?php echo base_url('Visiteur/lister_les_produits') ?>">Notre catalogue</a>
+            <button type="button" class="btn btn-danger btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">
+                        Catégories
+            </button>
+                    <div class="dropdown-menu">
+                    <?php foreach ($categories as $categorie) {
+                    echo '<a class="dropdown-item">' . anchor('visiteur/lister_les_produits_par_categorie/' . $categorie["NOCATEGORIE"], $categorie["LIBELLE"]) . '</a>'; ?><?php } ?>
+                    </div>
+
         </div>
         <div class="container-fluid d-inline-flex justify-content-center col">
             <form class="d-flex col-5" role="search" method="post" action="<?php echo base_url('Visiteur/lister_les_produits') ?>">

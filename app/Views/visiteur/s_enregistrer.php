@@ -32,7 +32,11 @@
                             <?php if($txtNom == '') { ?>   
                                 <a class="btn btn-outline-danger" href="<?php echo site_url('Visiteur/se_connecter') ?>">Se connecter</a>
                             <?php }
+                            
                             else { ?> 
+                            </form>
+                            <?php echo form_open('Visiteur/RGPD') ?>
+
                                 <a class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Exercer mon droit à l'oubli</a>
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -44,9 +48,13 @@
                                         <div class="modal-body text-dark">
                                             Le droit a l'oubli permet a l'ultilisateur d'effacer toutes ces informations de notre site, cette action entrainera une suppresion de votre profils utilisateur, vous serez donc deconnecter définitivement et rediriger vers l'accueil.
                                         </div>
+                                        <div>
+                                            <?php echo form_input('txtEmail', set_value('txtEmail', $txtEmail),['placeholder' => 'Email', 'class'=>'form-control','col-2'],'email');
+                                                  echo form_input('txtMdp', set_value('MdpDroitALoubli'),['placeholder' => 'Mot de passe', 'class'=>'form-control','col-2','id'=>'mdpRGPD'],'password') ?>
+                                        </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fermer</button>
-                                            <button type="button" href="<?php echo site_url('Visiteur/RGPD') ?>" class="btn btn-danger">Sauvegarder</button>
+                                            <input type="submit" name="submit" class="btn btn-danger" value="Comfirmer">
                                         </div>
                                         </div>
                                     </div>
@@ -54,7 +62,6 @@
                             <?php }?>
                             </div>                                                
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
