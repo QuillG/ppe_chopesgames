@@ -29,12 +29,16 @@ if ($session->has('cart')) {
                     alt="Logo">Chope Games
                 </a>
             <a class="nav-link active h5 link-dark" href="<?php echo base_url('Visiteur/lister_les_produits') ?>">Notre catalogue</a>
-            <button type="button" class="btn btn-danger btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">
-                        Catégories
-            </button>
-                    <div class="dropdown-menu">
+            <div class="dropdown">
+                <button type="button" class="btn btn-danger btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">
+                            Catégories
+                </button>
+                <ul class="dropdown-menu dropCategorie">
                     <?php foreach ($categories as $categorie) {
-                    echo '<a class="dropdown-item">' . anchor('visiteur/lister_les_produits_par_categorie/' . $categorie["NOCATEGORIE"], $categorie["LIBELLE"]) . '</a>'; ?><?php } ?>
+                        $class = 'dropdown-item';
+                        $no = $categorie["NOCATEGORIE"];
+                        $li = $categorie["LIBELLE"];
+                        echo "<li><a class='$class' href='". base_url("visiteur/lister_les_produits_par_categorie/$no") . "'>$li</a></li>"; ?><?php } ?>
                     </div>
 
         </div>
@@ -94,4 +98,5 @@ if ($session->has('cart')) {
             </ul>
         </div>         
     </nav>
-    <main> 
+    <div id="conteneur-page">
+        <main id="enveloppe-contenu">

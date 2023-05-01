@@ -1,13 +1,19 @@
-html {
-  height: 110%;
+#conteneur-page {
+  position: relative;
+  min-height: 89vh;
 }
-body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
+
+#enveloppe-contenu {
+  padding-bottom: 10rem;    /* Hauteur du pied-de-page */
 }
-body {position: relative;}
-#piedPage {position: absolute; bottom: 0; left: 0; right: 0}
+
+#pied-de-page {
+  color: aliceblue;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;            /* Hauteur du pied-de-page */
+}
 
 
 .carou img{
@@ -19,19 +25,26 @@ body {position: relative;}
   padding-left: 500px;
 }
 
-#marque{
+.voletGauche{
+  height: fit-content;
   background-color: rgb(231, 231, 231);
   color: #DC3545;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-#marque a{
+.voletGauche a{
   color: black;
   text-decoration: none;
 }
-#marque a:hover{
+.voletGauche a:hover{
   color: #DC3545;
   background-color: rgb(255, 255, 255);
   transition-duration: 0.4s;
-  border-radius: 100%;
 }
+
+.dropCategorie li a:hover{
+  color: #DC3545;
+  background-color: black;
+  transition-duration: 0.4s;
+}
+

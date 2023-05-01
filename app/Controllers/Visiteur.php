@@ -424,10 +424,12 @@ public function prodBySlug($slug){
             $Identifiant = esc($this->request->getPost('txtIdentifiant'));
             $MdP = esc($this->request->getPost('txtMotDePasse'));
             $adminRetourne = $modelAdm->retourner_administrateur_par_id($Identifiant);
-            if (!$adminRetourne == null) {
+            print_r($adminRetourne);exit(); 
+            if ($adminRetourne != null) {
                 //  if (password_verify($MdP,$adminRetourne->MOTDEPASSE))
                 // PAS D'ENCODAGE DU MOT DE PASSE POUR FACILITATION OPERATIONS DE TESTS (ENCODAGE A FAIRE EN PRODUCTION!)
                 if ($MdP == $adminRetourne["MOTDEPASSE"]) {
+                    
                     $session->set('identifiant', $adminRetourne["IDENTIFIANT"]);
                     $session->set('mail', $adminRetourne["EMAIL"]);
                     if (!empty($session->get('statut'))) {
@@ -438,8 +440,6 @@ public function prodBySlug($slug){
                     } elseif ($adminRetourne["PROFIL"] == 'Super') {
                         $session->set('statut', 3);
                     }
-                    print_r($Identifiant , $MdP);
-                    exit();
                     return redirect()->to('Visiteur/accueil');
                 } 
             } 

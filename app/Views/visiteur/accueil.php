@@ -1,7 +1,7 @@
 <h2 class='titrepage mt-2 h1'>Accueil</h2>
 <hr />
   <div class="col-12 d-flex">
-    <div class="col-2" id="marque">
+    <div class="col-2 voletGauche">
       <div class="text-center">
         <h3 class="mb-3 h2 ">Marque:</h3>
         <?php foreach ($marques as $marque) {

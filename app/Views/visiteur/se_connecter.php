@@ -7,7 +7,6 @@
                         <br>
                             <?php $validation = \Config\Services::validation(); ?>
                             <h3 class="text-center text-primary"><?php echo $TitreDeLaPage ?></h3>
-                            <h5 class="text-center text-primary"><?php echo $Time ?></h5>
                             <?PHP if($TitreDeLaPage=='Corriger votre formulaire') {
                                 echo service('validation')->getError("txtEmail"); 
                                 if(service('validation')->getError("txtEmail")=='') {
