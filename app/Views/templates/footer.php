@@ -2,9 +2,9 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="pied-de-page">
     <div class='container-fluid'>
         <div class="col-md-3 col-sm-6">
-            <img class="navbar-brand" style="height:64px;" src="<?php echo base_url('/assets/images/logo.jpg') ?>" alt="Logo">
+            <img class="navbar-brand" src="<?php echo base_url('/assets/images/logo.jpg') ?>" alt="Logo" id="logoFooter">
             <a href="<?php echo site_url('Visiteur/flux_rss') ?>">
-                <img class="navbar-brand" style="height:60px;" src="<?php echo base_url('/assets/images/rss.png') ?>" width="60">
+                <img class="navbar-brand"  src="<?php echo base_url('/assets/images/rss.png') ?>" id="logoRss">
             </a>
             <BR>© Quentin Guillemand, 2023 - D. Boucard and co
         </div>

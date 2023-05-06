@@ -18,9 +18,7 @@ class Filters extends BaseConfig
     public $aliases = [
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
-        'honeypot' => Honeypot::class,
         'throttle' => \App\Filters\Throttle::class,
-        'secureheaders' => \App\Filters\SecureHeaders::class,
     ];
 
     /**
@@ -31,12 +29,10 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
-            'honeypot',
             'csrf',
         ],
         'after' => [
             'toolbar',
-            'honeypot',
         ],
     ];
 

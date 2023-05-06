@@ -47,4 +47,9 @@
   background-color: black;
   transition-duration: 0.4s;
 }
-
+#logoFooter{
+height: 64px;
+}
+#logoRss{
+height: 60px;
+}

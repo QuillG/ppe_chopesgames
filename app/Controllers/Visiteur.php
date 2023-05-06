@@ -84,7 +84,6 @@ class Visiteur extends BaseController
         }else{
             $session = session();
             $pager = \Config\Services::pager();
-
             $modelCat = new ModeleCategorie();
             $categorie = $modelCat->retourner_categories($nocategorie);
             $data['categories'] = $modelCat->retourner_categories();
@@ -131,9 +130,9 @@ class Visiteur extends BaseController
         $modelProd = new ModeleProduit();
         $produit = $modelProd->retourner_produits($noProduit);
         $item = array(
-            'id'    => $produit["NOPRODUIT"],
-            'qty'    => 1,
-            'price'    => ($produit["PRIXHT"]) + ($produit["TAUXTVA"]),
+            'id'  => $produit["NOPRODUIT"],
+            'qty'  => 1,
+            'price'  => ($produit["PRIXHT"]) + ($produit["TAUXTVA"]),
             'ht' => $produit["PRIXHT"],
             'tva' => $produit["TAUXTVA"],
             'name'    => $produit["LIBELLE"],
@@ -423,8 +422,7 @@ public function prodBySlug($slug){
             $modelAdm = new ModeleAdministrateur();
             $Identifiant = esc($this->request->getPost('txtIdentifiant'));
             $MdP = esc($this->request->getPost('txtMotDePasse'));
-            $adminRetourne = $modelAdm->retourner_administrateur_par_id($Identifiant);
-            print_r($adminRetourne);exit(); 
+            $adminRetourne = $modelAdm->retourner_administrateur_par_id($Identifiant); 
             if ($adminRetourne != null) {
                 //  if (password_verify($MdP,$adminRetourne->MOTDEPASSE))
                 // PAS D'ENCODAGE DU MOT DE PASSE POUR FACILITATION OPERATIONS DE TESTS (ENCODAGE A FAIRE EN PRODUCTION!)

@@ -11,9 +11,9 @@ if ($session->has('cart')) {
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url('/assets/images/game-center.png')?>">
     <link rel="alternate" type="application/rss+XML" title="ChopesGames" href="<?php echo base_url('AdministrateurSuper/flux_rss') ?>" />
-    <link  {csp-style-nonce} rel="stylesheet" href="<?php echo css_url('bootstrap.min') ?>">
-    <link  {csp-style-nonce} rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" nonce>
-    <link  {csp-style-nonce} rel="stylesheet" href="<?php echo site_url('/assets/css/style.css'); ?>" nonce>
+    <link rel="stylesheet" href="<?php echo css_url('bootstrap.min') ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="<?php echo site_url('/assets/css/style.css'); ?>">
     
     <head>
     <title>Ma page</title>
@@ -38,7 +38,7 @@ if ($session->has('cart')) {
                         $class = 'dropdown-item';
                         $no = $categorie["NOCATEGORIE"];
                         $li = $categorie["LIBELLE"];
-                        echo "<li><a class='$class' href='". base_url("visiteur/lister_les_produits_par_categorie/$no") . "'>$li</a></li>"; ?><?php } ?>
+                        echo "<li><a class='$class' href='". base_url("Visiteur/lister_les_produits_par_categorie/$no") . "'>$li</a></li>"; ?><?php } ?>
                     </div>
 
         </div>
@@ -58,7 +58,7 @@ if ($session->has('cart')) {
                 </li>
                 <?php if ($session->get('statut') == 2 or $session->get('statut') == 3) : ?>
                     <div class="nav-item dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        <button type="button" class="btn btn-danger btn-outline-dark dropdown-toggle me-2" data-bs-toggle="dropdown">
                             Administration
                         </button>
                         <div class="dropdown-menu">

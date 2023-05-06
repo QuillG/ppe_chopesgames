@@ -5,8 +5,7 @@
                     <div class="col-md-12 container">
                         <?php  echo form_open('Visiteur/se_connecter') ?>
                         <br>
-                            <?php $validation = \Config\Services::validation(); ?>
-                            <h3 class="text-center text-primary"><?php echo $TitreDeLaPage ?></h3>
+                            <h3 class="text-center text-primary m-4"><?php echo $TitreDeLaPage ?></h3>
                             <?PHP if($TitreDeLaPage=='Corriger votre formulaire') {
                                 echo service('validation')->getError("txtEmail"); 
                                 if(service('validation')->getError("txtEmail")=='') {
@@ -20,11 +19,11 @@
                             <div>
                                 <?php 
                                 echo form_input('txtMdp', set_value('txtMdp'),['placeholder' => 'Mot de passe', 'class'=>'form-control', 'id'=>'mdp'], 'password');
-                                echo form_checkbox('password', 'accept', false, 'onclick = Affichermasquermdp()');?>Afficher mot de passe
+                                echo form_checkbox('password', 'accept', false, ['class'=>'mt-3'], 'onclick = Affichermasquermdp()');?>Afficher mot de passe
                             </div>
-                            <?php echo form_submit('submit', 'Valider',['class'=>'btn btn-primary','id'=>'connect'], 'submit'); ?>
-                            <div class="text-primary right">
-                            <a class="btn btn-primary" href="<?php echo site_url('Visiteur/s_enregistrer') ?>">Crée un compte</a>
+                            <div class="d-flex flex-nowrap justify-content-between mt-3">
+                            <?php echo form_submit('submit', 'Valider',['class'=>'btn btn-danger','id'=>'connect'], 'submit'); ?>
+                            <a class="btn btn-outline-danger" href="<?php echo site_url('Visiteur/s_enregistrer') ?>">Crée un compte</a>
                             </div>
                         </form>
                     </div>

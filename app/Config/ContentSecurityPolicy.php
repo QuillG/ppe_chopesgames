@@ -24,7 +24,7 @@ class ContentSecurityPolicy extends BaseConfig
      *
      * @var bool
      */
-    public $reportOnly = false;
+    public $reportOnly = true;
 
     /**
      * Specifies a URL where a browser will send reports
@@ -60,7 +60,7 @@ class ContentSecurityPolicy extends BaseConfig
      *
      * @var string|string[]
      */
-    public $scriptSrc = ['self', 'unsafe-inline'];
+    public $scriptSrc = ['self'];
  
 
     /**
@@ -68,14 +68,14 @@ class ContentSecurityPolicy extends BaseConfig
      *
      * @var string|string[]
      */
-    public $styleSrc = ['self', 'cdn.jsdelivr.net' , 'unsafe-inline' , 'nonce-d5ba0de205608856c881e1ff', 'nonce-4fbcdb0afe47081290db1b6c','nonce-8bda06758f3c178ae8266fb5','nonce-116779ed453bc0cb6b39b02d'];
+    public $styleSrc = ['self', 'cdn.jsdelivr.net'];
 
     /**
      * Defines the origins from which images can be loaded.
      *
      * @var string|string[]
      */
-    public $imageSrc = ['self'];
+    public $imageSrc = ['self','data:'];
 
     /**
      * Restricts the URLs that can appear in a page's `<base>` element.
