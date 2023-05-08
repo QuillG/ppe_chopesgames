@@ -24,8 +24,7 @@
 
                         <?php endforeach; ?>
 
-                    </select> <br />
-
+                    </select> <br/>
                     <label class="text-primary" for="txtLibelle">Libelle:</label>
                     <input class="form-control" type="input" name="txtLibelle" value="<?php echo set_value('txtLibelle'); ?>" /><br />
 

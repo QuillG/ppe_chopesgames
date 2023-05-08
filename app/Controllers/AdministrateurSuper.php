@@ -4,6 +4,8 @@ use App\Models\ModeleProduit;
 use App\Models\ModeleCategorie;
 use App\Models\ModeleIdentifiant;
 use App\Models\ModeleMarque;
+use App\Models\ModeleAdministrateur;
+use App\Models\ModeleNewsLetter;
 
 helper(['url', 'assets', 'form']);
 
@@ -88,6 +90,145 @@ class AdministrateurSuper extends BaseController
             }
             //else redirecte ??
         }
+    }
+
+    public function ajouter_une_categorie(){
+
+        helper(['form']);
+        $validation =  \Config\Services::validation();
+        $modelCat = new ModeleCategorie();
+        $data['categories'] = $modelCat->retourner_categories();
+        $modelCate = new ModeleCategorie();
+        $data['TitreDeLaPage'] = 'Ajouter une catégorie';
+        $rules = [ //régles de validation creation
+            'txtCategorie' => 'required',
+        ];
+        if (!$this->validate($rules)) {
+            if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre formulaire'; //correction
+            else {
+                    $data['TitreDeLaPage'] = 'Ajouter une catégorie';
+            }
+        Return view('templates/header', $data).
+        view('AdministrateurSuper/ajouter_une_categorie').
+        view('templates/footer');
+    } else // si formulaire valide
+    {
+        $donneesAInserer = array(
+            'LIBELLE' => $this->request->getPost('txtCategorie'),
+        );
+        $modelCate->insert($donneesAInserer);  
+        return redirect()->to('visiteur/lister_les_produits');
+            }
+        }
+
+        public function ajouter_une_marque(){
+
+        helper(['form']);
+        $validation =  \Config\Services::validation();
+        $modelMar = new ModeleMarque();
+        $modelCat = new ModeleCategorie();
+        $data['categories'] = $modelCat->retourner_categories();
+        $data['TitreDeLaPage'] = 'Ajouter une marque';
+        $rules = [ //régles de validation creation
+            'txtMarque' => 'required',
+        ];
+        if (!$this->validate($rules)) {
+            if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre formulaire'; //correction
+            else {
+                    $data['TitreDeLaPage'] = 'Ajouter une marque';
+            }
+        Return view('templates/header', $data).
+        view('AdministrateurSuper/ajouter_une_marque').
+        view('templates/footer');
+    } else // si formulaire valide
+    {
+        $donneesAInserer = array(
+            'NOM' => $this->request->getPost('txtMarque'),
+        );
+        $modelMar->insert($donneesAInserer);  
+        return redirect()->to('visiteur/lister_les_produits');
+            }
+        }
+
+        public function ajouter_un_administrateur(){
+
+        helper(['form']);
+        
+        $validation =  \Config\Services::validation();
+        $modelAdm = new ModeleAdministrateur();
+        $modelCat = new ModeleCategorie();
+        $data['AdmEmp'] = $modelAdm->retourner_administrateurs_employes();
+        $data['categories'] = $modelCat->retourner_categories();
+        $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+
+        $rules = [ //régles de validation creation
+            'Identifiant' => 'required',
+            'Mdp' => 'required',
+            'Email' => 'required',
+        ];
+        if (isset($_POST['btnValidate'])){
+            $val = $_POST['btnValidate'];
+        }
+        
+        if (!$this->validate($rules)) {
+            if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre formulaire'; //correction
+            else {
+                    $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+            }
+        Return view('templates/header', $data).
+        view('AdministrateurSuper/ajouter_un_administrateur').
+        view('templates/footer');
+    } else // si formulaire valide
+    {
+       
+        if ($val === 'Modifier') {
+            $idEmp = $this->request->getPost('IdentifiantEmp');
+            $donneesAUpdate = array(
+                'IDENTIFIANT' => $this->request->getPost('Identifiant'),
+                'EMAIL' => $this->request->getPost('Email'),
+                'MOTDEPASSE' => $this->request->getPost('Mdp'),
+            );
+            $modelAdm->update($idEmp, $donneesAUpdate);
+        }
+        else 
+        {
+        $donneesAInserer = array(
+                'IDENTIFIANT' => $this->request->getPost('Identifiant'),
+                'EMAIL' => $this->request->getPost('Email'),
+                'PROFIL' => 'Employé',
+                'MOTDEPASSE' => $this->request->getPost('Mdp'),
+            );
+        // print_r($donneesAInserer); exit();
+         $modelAdm->insert($donneesAInserer);  
+        }
+        return redirect()->to('visiteur/lister_les_produits');
+            }
+        }
+
+    public function modifier_supprimer_un_administrateur(){
+        helper(['form']);
+        $modelAdm = new ModeleAdministrateur();
+        $modelCat = new ModeleCategorie();
+        $data['AdmEmp'] = $modelAdm->retourner_administrateurs_employes();
+        $data['categories'] = $modelCat->retourner_categories();
+        $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+        if (isset($_POST['btnModif'])){
+            $Employe = $modelAdm->retourner_administrateur_par_id( $this->request->getPost('idEmp'));
+            $data['txtIdentifiant'] = $Employe['IDENTIFIANT'];
+            $data['txtEmail'] = $Employe['EMAIL'];
+            $data['TitreDeLaPage'] = 'Modifier un administrateur';
+            $data['txtBtn'] = 'Modifier';
+
+        
+        }
+        if (isset($_POST['btnSup'])) {
+            $modelAdm->delete($this->request->getPost('idEmp'));
+            $data['AdmEmp'] = $modelAdm->retourner_administrateurs_employes();
+        }
+        Return view('templates/header', $data).
+        view('AdministrateurSuper/ajouter_un_administrateur').
+        view('templates/footer');
+        
     }
 
     public function rendre_indisponible($noProduit = null)
@@ -217,4 +358,35 @@ class AdministrateurSuper extends BaseController
             return redirect()->to('visiteur/lister_les_produits');
         }
     }
+
+    public function envoyer_newsletter(){
+        helper(['form']);
+        $modelCat = new ModeleCategorie();
+        $modelNews = new ModeleNewsLetter();
+        $data['categories'] = $modelCat->retourner_categories();
+        $data['TitreDeLaPage'] = 'Nouvelle NewsLetter';
+        $rules = [ //régles de validation creation
+            'txtObjet' => 'required',
+            'txtTitre' => 'required',
+            'txtMessage' => 'required',
+        ];
+
+        if (!$this->validate($rules)) {
+            if($_POST)$data['TitreDeLaPage'] = 'Corriger votre formulaire';
+        Return view('templates/header', $data).
+        view('AdministrateurSuper/envoyer_newsletter').
+        view('templates/footer');      
+    }
+    else {
+        $donneesAInserer = array(
+            'OBJET' => $this->request->getPost('txtObjet'),
+            'TITRE' => $this->request->getPost('txtTitre'),
+            'MESSAGE' => $this->request->getPost('txtMessage'),
+        );   
+        $modelNews->insert($donneesAInserer);
+        return redirect()->to('visiteur/lister_les_produits');
+    }
+
+    }
 }
+

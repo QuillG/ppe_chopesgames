@@ -65,8 +65,12 @@ if ($session->has('cart')) {
                             <a class="dropdown-item" href="<?php echo base_url('AdministrateurEmploye/afficher_les_clients') ?>">Clients->Commandes</a>
                             <a class="dropdown-item" href="">(2Do) Commandes non traitées</a>
                             <?php if ($session->get('statut') == 3) { ?>
+                                <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/ajouter_un_administrateur') ?>">Gestion des administrateur</a>
                                 <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/ajouter_un_produit') ?>">Ajouter un produit</a>
+                                <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/ajouter_une_categorie') ?>">Ajouter une catégorie</a>
+                                <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/ajouter_une_marque') ?>">Ajouter une marque</a>
                                 <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/modifier_identifiants_bancaires_site') ?>">Modifier identifiants bancaires site</a>
+                                <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/envoyer_newsletter') ?>">Nouvelle NewsLetter</a>
                             <?php } ?>
                         </div>
                     </div>

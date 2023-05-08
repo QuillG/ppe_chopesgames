@@ -8,6 +8,8 @@ class ModeleMarque extends Model
 {
 
     protected $table = 'marque';
+    protected $allowedFields = ['NOMARQUE', 'NOM'];
+    protected $primaryKey = 'NOMARQUE';
 
     public function retourner_marques($pNoMarque = false)
     {

@@ -1,0 +1,234 @@
+CRITICAL - 2023-05-07 06:39:04 --> Array to string conversion
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\AdministrateurSuper\ajouter_un_administrateur.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\Users\\Propri...', 36)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurS...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(176): view('AdministrateurS...')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-07 07:07:50 --> Array to string conversion
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\AdministrateurSuper\ajouter_un_administrateur.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\Users\\Propri...', 36)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurS...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(176): view('AdministrateurS...')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-07 07:36:04 --> Undefined variable $AdmEmp
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\AdministrateurSuper\ajouter_un_administrateur.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 34)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurS...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(196): view('AdministrateurS...')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_un_administrateur()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-07 09:11:43 --> Trying to access array offset on value of type null
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Users\\Propri...', 193)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_un_administrateur()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-07 09:13:32 --> Trying to access array offset on value of type null
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Users\\Propri...', 193)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_un_administrateur()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-07 09:19:09 --> Trying to access array offset on value of type null
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Users\\Propri...', 197)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_un_administrateur()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-07 09:20:24 --> Trying to access array offset on value of type null
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Users\\Propri...', 197)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_un_administrateur()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+ERROR - 2023-05-07 10:10:54 --> Duplicata du champ 'dupont22' pour la clef 'administrateur.PRIMARY'
+CRITICAL - 2023-05-07 10:10:54 --> Duplicata du champ 'dupont22' pour la clef 'administrateur.PRIMARY'
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `adminis...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `adminis...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `adminis...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `adminis...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(191): CodeIgniter\Model->update(NULL, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+CRITICAL - 2023-05-07 11:46:14 --> Invalid file: AdministrateurSuper/modifier_un_administrateur.php
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('AdministrateurS...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurS...', Array, true)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(216): view('AdministrateurS...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 11:46:24 --> Invalid file: AdministrateurSuper/modifier_un_administrateur.php
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('AdministrateurS...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurS...', Array, true)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(216): view('AdministrateurS...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:36:55 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(227): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:37:06 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(227): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:37:08 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(227): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:42:17 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(229): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:47 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:47 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:47 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:48 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:48 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:48 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:48 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:48 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-07 13:44:48 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(230): CodeIgniter\BaseModel->delete(NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->supprimer_un_administrateur()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}

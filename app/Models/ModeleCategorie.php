@@ -8,6 +8,8 @@ class ModeleCategorie extends Model
 {
 
     protected $table = 'categorie';
+    protected $allowedFields = ['NOCATEGORIE', 'LIBELLE'];
+    protected $primaryKey = 'NOCATEGORIE';
 
     public function retourner_categories($pNoCategorie = false)
     {
