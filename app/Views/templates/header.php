@@ -63,7 +63,7 @@ if ($session->has('cart')) {
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="<?php echo base_url('AdministrateurEmploye/afficher_les_clients') ?>">Clients->Commandes</a>
-                            <a class="dropdown-item" href="">(2Do) Commandes non traitées</a>
+                            <a class="dropdown-item" href="<?php echo base_url('AdministrateurEmploye/afficher_les_commandes_non_traitees') ?>">Commandes non traitées</a>
                             <?php if ($session->get('statut') == 3) { ?>
                                 <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/ajouter_un_administrateur') ?>">Gestion des administrateur</a>
                                 <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/ajouter_un_produit') ?>">Ajouter un produit</a>

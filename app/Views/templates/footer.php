@@ -23,9 +23,16 @@
             <a href="https://www.Instagram.com/ChopesGamesShop"><i class="bi bi-instagram"></i> Instagram</a><br>
         </div>
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6" id="newsLetter">
             <h4>NewsLetter</h4>
-
+            <p>Abonnez vous à notre lettre d'information pour ne rater aucune nouveauté</p>
+            <div>
+                <form class="d-flex" role="add" method="post" action="<?php echo base_url('Visiteur/s_enregistrer_Newletter') ?>">
+                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
+                    <input class="form-control col" type="text" placeholder="Votre Email" name="txtMail" id="txtMail">
+                    <input type="submit" name="submit" class="btn btn-danger btn-md ms-2" value="Envoyer">
+                </form>
+            </div>
         </div>
 
     </div>

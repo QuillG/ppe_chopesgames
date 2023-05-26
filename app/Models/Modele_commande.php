@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class Modele_commande extends Model
 {
-    protected $table = 'commande';
+    protected $table = 'commande com';
     protected $allowedFields = ['NOCLIENT', 'DATECOMMANDE', 'TOTALHT', 'TOTALTTC', 'DATETRAITEMENT'];
     protected $primaryKey = 'NOCOMMANDE';
 
@@ -28,6 +28,18 @@ class Modele_commande extends Model
     return $this->where(['commande.NOCLIENT' => $noclient])
        ->join('client', 'client.NOCLIENT = commande.noclient')
        ->findAll();
+   }
+
+   public function retourner_commande_non_traitees(){
+      //select DATECOMMANDE, NOM , PRENOM , TOTALTTC
+      // from commande com inner join client cli on com.NOCLIENT = cli.NOCLIENT
+      //Where DATETRAITEMENT = NULL
+
+      return $this->select('com.DATECOMMANDE', 'com.TOTALTTC','cli.NOM','cli.PRENOM' ,)
+         ->join('client cli' , 'cli.NOCLIENT = com.NOCLIENT')
+         ->where(['DATETRAITEMENT' => NULL])
+         ->findAll();
+
    }
       
 } 

@@ -40,35 +40,35 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $mailPath = '/usr/sbin/sendmail';
+    public $mailPath = 'localhost';
 
     /**
      * SMTP Server Address
      *
      * @var string
      */
-    public $SMTPHost='smtp.sfr.fr';
+    public $SMTPHost='';
 
     /**
      * SMTP Username
      *
      * @var string
      */
-    public $SMTPUser='ntt@neuf.fr';
+    public $SMTPUser='';
 
     /**
      * SMTP Password
      *
      * @var string
      */
-    public $SMTPPass='xxxxxx';
+    public $SMTPPass='';
 
     /**
      * SMTP Port
      *
      * @var int
      */
-    public $SMTPPort = 587;
+    public $SMTPPort = 25;
 
     /**
      * SMTP Timeout (in seconds)

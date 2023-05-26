@@ -4,8 +4,8 @@
             <div class="col">
                 <div class="col-md-12 container">
                     <br>
-                    <h2 class="text-primary"><?php echo $TitreDeLaPage ?></h2>
-                    <?PHP if($TitreDeLaPage=='Corriger votre formulaire') echo service('validation')->listErrors();
+                    <h2 class="text-primary mb-4"><?php echo $TitreDeLaPage ?></h2>
+                    <?PHP if($TitreDeLaPage=='Corriger votre ajout') echo service('validation')->listErrors();
                              if(!isset($txtIdentifiant)) $txtIdentifiant=''; if(!isset($txtEmail)) $txtEmail='';if(!isset($txtBtn)) $txtBtn='Valider';
                     echo form_open('AdministrateurSuper/ajouter_un_administrateur');
                     echo csrf_field();
@@ -44,8 +44,7 @@
                                 <td><?php echo form_submit('btnSup', 'Supprimer ', ['class'=>'btn btn-outline-danger btn-md']) ?></td>
                                 </form>
                             </tr>
-                            <?php endforeach ?>
-                            
+                            <?php endforeach ?>    
                 </div>
             </div>
         </div>

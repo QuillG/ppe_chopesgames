@@ -6,6 +6,7 @@ use App\Models\ModeleIdentifiant;
 use App\Models\ModeleMarque;
 use App\Models\ModeleAdministrateur;
 use App\Models\ModeleNewsLetter;
+use App\Models\ModeleAbonnes;
 
 helper(['url', 'assets', 'form']);
 
@@ -13,8 +14,11 @@ class AdministrateurSuper extends BaseController
 {
 
     public function ajouter_un_produit($prod = false)
-    {
-        $validation =  \Config\Services::validation();
+    {   
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        }
         $modelCat = new ModeleCategorie();
         $data['categories'] = $modelCat->retourner_categories();
         $modelMarq = new ModeleMarque();
@@ -94,8 +98,11 @@ class AdministrateurSuper extends BaseController
 
     public function ajouter_une_categorie(){
 
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        }
         helper(['form']);
-        $validation =  \Config\Services::validation();
         $modelCat = new ModeleCategorie();
         $data['categories'] = $modelCat->retourner_categories();
         $modelCate = new ModeleCategorie();
@@ -123,8 +130,11 @@ class AdministrateurSuper extends BaseController
 
         public function ajouter_une_marque(){
 
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        }    
         helper(['form']);
-        $validation =  \Config\Services::validation();
         $modelMar = new ModeleMarque();
         $modelCat = new ModeleCategorie();
         $data['categories'] = $modelCat->retourner_categories();
@@ -151,61 +161,79 @@ class AdministrateurSuper extends BaseController
         }
 
         public function ajouter_un_administrateur(){
-
-        helper(['form']);
         
-        $validation =  \Config\Services::validation();
-        $modelAdm = new ModeleAdministrateur();
-        $modelCat = new ModeleCategorie();
-        $data['AdmEmp'] = $modelAdm->retourner_administrateurs_employes();
-        $data['categories'] = $modelCat->retourner_categories();
-        $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+            $session = session();
+            if ($session->get('statut') != 3){
+                return redirect()->to('visiteur/accueil');
+            }     
+            helper(['form']);
+            $validation =  \Config\Services::validation();
+            $modelAdm = new ModeleAdministrateur();
+            $modelCat = new ModeleCategorie();
+            $data['AdmEmp'] = $modelAdm->retourner_administrateurs_employes();
+            $data['categories'] = $modelCat->retourner_categories();
+            $data['TitreDeLaPage'] = 'Ajouter un administrateur';
 
-        $rules = [ //régles de validation creation
-            'Identifiant' => 'required',
-            'Mdp' => 'required',
-            'Email' => 'required',
-        ];
-        if (isset($_POST['btnValidate'])){
-            $val = $_POST['btnValidate'];
-        }
-        
-        if (!$this->validate($rules)) {
-            if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre formulaire'; //correction
-            else {
-                    $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+            $rules = [ //régles de validation creation
+                'Identifiant' => 'required',
+                'Mdp' => 'required',
+                'Email' => 'required|valid_email',
+            ];
+            $messages = [ //message à renvoyer en cas de non respect des règles de validation
+                'Email' => [
+                    'required' => 'Aucune Adresse mail renseignée',
+                    'valid_email' => 'Format d\'adresse email incorrect',
+                ],
+                'Mdp'    => [
+                    'required' => 'Mot de passe non renseigné',
+                ],
+                'Identifiant'    => [
+                    'required' => 'Email non renseigné',
+                ]
+
+            ];
+            if (isset($_POST['btnValidate'])){
+                $val = $_POST['btnValidate'];
+            }   
+            if (!$this->validate($rules , $messages)) {
+                if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre ajout'; //correction
+                else {
+                        $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+                }
+            Return view('templates/header', $data).
+            view('AdministrateurSuper/ajouter_un_administrateur').
+            view('templates/footer');
+        } else // si formulaire valide
+        { 
+            if ($val === 'Modifier') {
+                $idEmp = $this->request->getPost('IdentifiantEmp');
+                $donneesAUpdate = array(
+                    'IDENTIFIANT' => $this->request->getPost('Identifiant'),
+                    'EMAIL' => $this->request->getPost('Email'),
+                    'MOTDEPASSE' => $this->request->getPost('Mdp'),
+                );
+                $modelAdm->update($idEmp, $donneesAUpdate);
             }
-        Return view('templates/header', $data).
-        view('AdministrateurSuper/ajouter_un_administrateur').
-        view('templates/footer');
-    } else // si formulaire valide
-    {
-       
-        if ($val === 'Modifier') {
-            $idEmp = $this->request->getPost('IdentifiantEmp');
-            $donneesAUpdate = array(
-                'IDENTIFIANT' => $this->request->getPost('Identifiant'),
-                'EMAIL' => $this->request->getPost('Email'),
-                'MOTDEPASSE' => $this->request->getPost('Mdp'),
-            );
-            $modelAdm->update($idEmp, $donneesAUpdate);
-        }
-        else 
-        {
-        $donneesAInserer = array(
-                'IDENTIFIANT' => $this->request->getPost('Identifiant'),
-                'EMAIL' => $this->request->getPost('Email'),
-                'PROFIL' => 'Employé',
-                'MOTDEPASSE' => $this->request->getPost('Mdp'),
-            );
-        // print_r($donneesAInserer); exit();
-         $modelAdm->insert($donneesAInserer);  
-        }
-        return redirect()->to('visiteur/lister_les_produits');
+            else 
+            {
+            $donneesAInserer = array(
+                    'IDENTIFIANT' => $this->request->getPost('Identifiant'),
+                    'EMAIL' => $this->request->getPost('Email'),
+                    'PROFIL' => 'Employé',
+                    'MOTDEPASSE' => $this->request->getPost('Mdp'),
+                );
+            $modelAdm->insert($donneesAInserer);  
             }
-        }
+            return redirect()->to('visiteur/lister_les_produits');
+                }
+            }
 
     public function modifier_supprimer_un_administrateur(){
+
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        }   
         helper(['form']);
         $modelAdm = new ModeleAdministrateur();
         $modelCat = new ModeleCategorie();
@@ -233,6 +261,10 @@ class AdministrateurSuper extends BaseController
 
     public function rendre_indisponible($noProduit = null)
     {
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        }   
         if ($noProduit == null) {
             return redirect()->to('visiteur/lister_les_produits');
         }
@@ -323,6 +355,10 @@ class AdministrateurSuper extends BaseController
 
     function modifier_identifiants_bancaires_site()
     {
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        }   
         $modelIdent = new ModeleIdentifiant();
         $data['identifiant'] = $modelIdent->retourner_identifiant();
 
@@ -359,8 +395,15 @@ class AdministrateurSuper extends BaseController
         }
     }
 
+    
+
     public function envoyer_newsletter(){
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        }   
         helper(['form']);
+        $email = \Config\Services::email();
         $modelCat = new ModeleCategorie();
         $modelNews = new ModeleNewsLetter();
         $data['categories'] = $modelCat->retourner_categories();
@@ -384,6 +427,16 @@ class AdministrateurSuper extends BaseController
             'MESSAGE' => $this->request->getPost('txtMessage'),
         );   
         $modelNews->insert($donneesAInserer);
+        $modelAbo = new ModeleAbonnes();
+        $abonnes = $modelAbo->findAll();
+        foreach($abonnes as $abo){
+            $email->setFrom('ChopeGames@gmail.com', 'ChopeGames');
+            $email->setTo($abo['MAIL']);
+            $email->setSubject('NewsLetter');
+            $email->setMessage('Merci de ton inscription à la NewsLetter');
+            $email->send();
+            
+        }
         return redirect()->to('visiteur/lister_les_produits');
     }
 

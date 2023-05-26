@@ -52,4 +52,14 @@ class AdministrateurEmploye extends BaseController
         view('AdministrateurEmploye/details_commande').
         view('templates/footer');
     }
+
+    public function afficher_les_commandes_non_traitees()
+    {
+        $modelCom = new Modele_commande();
+        $data['commandesNonTraitees'] = $modelCom->retourner_commande_non_traitees();
+        print_r($data); exit();
+        Return view('templates/header', $data).
+        view('AdministrateurEmploye/commande_non_traite').
+        view('templates/footer');
+    }
 }

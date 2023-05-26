@@ -8,6 +8,7 @@ use App\Models\ModeleClient;
 use App\Models\ModeleCategorie;
 use App\Models\ModeleMarque;
 use App\Models\ModeleAdministrateur;
+use App\Models\ModeleAbonnes;
 //use App\Models\ModeleAdministrateur;
 //$pager = \Config\Services::pager();
 helper(['url', 'assets']);
@@ -449,7 +450,7 @@ public function prodBySlug($slug){
 
     public function RGPD() {
         helper(['form']);
-        $session = session();
+        $session = session(); 
         $rules = [ //régles de validation
             'txtMotDePasse'   =>'required'
         ];
@@ -467,11 +468,47 @@ public function prodBySlug($slug){
             'PRENOM' => "" ,
             'NOM' => "",
         ];
-        $modelCli->update($id, $UtilisateurRetourne);
-        $session = session();
-        $session->destroy();
-        return redirect()->to('Visiteur/accueil');
+        if($UtilisateurRetourne['MOTDEPASSE'] == $MdP){
+            $modelCli->update($id, $UtilisateurRetourne);
+            $session = session();
+            $session->destroy();
+            return redirect()->to('Visiteur/accueil');
+        }
 
     }
 
-}
+    public function s_enregistrer_Newletter(){
+        $email = \Config\Services::email();
+        $session = session();;
+        $modelAbo = new ModeleAbonnes();
+        $mail = $this->request->getPost('txtMail');
+            if ($modelAbo->retourner_abonnesParMail($mail)) { // enregistrement
+                print_r("Le client existe"); exit ;
+
+            } else {
+                $data = [
+                    'MAIL' => $mail,
+                ];
+                 
+                $modelAbo->insert($data);// envoi d'une modification de compte
+                $email->setFrom('ChopeGames@gmail.com', 'ChopeGames');
+                $email->setTo($mail);
+                $email->setSubject('NewsLetter');
+                $email->setMessage('Merci de ton inscription à la NewsLetter');
+                $email->send();
+            }
+        
+            $modelProd = new ModeleProduit();
+            $data['vitrines'] = $modelProd->retourner_vitrine();
+            $modelCat = new ModeleCategorie();
+            $data['categories'] = $modelCat->retourner_categories();
+            $modelMarq = new ModeleMarque();
+            $data['marques'] = $modelMarq->retourner_marques();
+    
+            Return view('templates/header', $data).
+            view('visiteur/accueil').
+            view('templates/footer');
+    }
+        
+
+    }
