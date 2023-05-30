@@ -36,4 +36,9 @@ class ModeleAdministrateur extends Model
             ->first();
     }
 
+    function retourner_administrateur_super(){
+        return $this->where(['PROFIL' => 'Super'])
+        ->first();
+    }
+
 }

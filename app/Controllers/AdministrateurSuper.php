@@ -108,9 +108,15 @@ class AdministrateurSuper extends BaseController
         $modelCate = new ModeleCategorie();
         $data['TitreDeLaPage'] = 'Ajouter une catégorie';
         $rules = [ //régles de validation creation
-            'txtCategorie' => 'required',
+            'txtCategorie' => 'required|is_unique[categorie.LIBELLE]',
         ];
-        if (!$this->validate($rules)) {
+        $messages = [ //message à renvoyer en cas de non respect des règles de validation
+            'txtCategorie' => [
+                'required' => 'Aucune categorie renseignée',
+                'is_unique' => 'Cette categorie existe déja !',
+            ],
+        ];
+        if (!$this->validate($rules, $messages)) {
             if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre formulaire'; //correction
             else {
                     $data['TitreDeLaPage'] = 'Ajouter une catégorie';
@@ -140,9 +146,15 @@ class AdministrateurSuper extends BaseController
         $data['categories'] = $modelCat->retourner_categories();
         $data['TitreDeLaPage'] = 'Ajouter une marque';
         $rules = [ //régles de validation creation
-            'txtMarque' => 'required',
+            'txtMarque' => 'required|is_unique[marque.NOM]',
         ];
-        if (!$this->validate($rules)) {
+        $messages = [ //message à renvoyer en cas de non respect des règles de validation
+            'txtMarque' => [
+                'required' => 'Aucune marque renseignée',
+                'is_unique' => 'Cette marque existe déja !',
+            ],
+        ];
+        if (!$this->validate($rules, $messages)) {
             if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre formulaire'; //correction
             else {
                     $data['TitreDeLaPage'] = 'Ajouter une marque';
@@ -167,38 +179,47 @@ class AdministrateurSuper extends BaseController
                 return redirect()->to('visiteur/accueil');
             }     
             helper(['form']);
-            $validation =  \Config\Services::validation();
             $modelAdm = new ModeleAdministrateur();
             $modelCat = new ModeleCategorie();
             $data['AdmEmp'] = $modelAdm->retourner_administrateurs_employes();
             $data['categories'] = $modelCat->retourner_categories();
             $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+            if (isset($_POST['btnValidate'])){
+                $val = $_POST['btnValidate'];
+            }else {
+                $val = "Valider";
+            }   
 
             $rules = [ //régles de validation creation
-                'Identifiant' => 'required',
+                'Identifiant' => 'required|is_unique[administrateur.IDENTIFIANT]',
                 'Mdp' => 'required',
-                'Email' => 'required|valid_email',
+                'Email' => 'required|valid_email|is_unique[administrateur.EMAIL]',
             ];
             $messages = [ //message à renvoyer en cas de non respect des règles de validation
                 'Email' => [
                     'required' => 'Aucune Adresse mail renseignée',
                     'valid_email' => 'Format d\'adresse email incorrect',
+                    'is_unique' => 'Cette Email existe déja !',
                 ],
                 'Mdp'    => [
                     'required' => 'Mot de passe non renseigné',
                 ],
                 'Identifiant'    => [
                     'required' => 'Email non renseigné',
+                    'is_unique' => 'Cette identifiant existe déja !',
                 ]
 
             ];
-            if (isset($_POST['btnValidate'])){
-                $val = $_POST['btnValidate'];
-            }   
-            if (!$this->validate($rules , $messages)) {
-                if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre ajout'; //correction
+            if (!$this->validate($rules , $messages) && $val == "Valider") {
+                if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre ajout';
+                elseif (!$this->validate($rules , $messages)){
+                    if ($_POST){$data['TitreDeLaPage'] = 'Corriger votre modification';
+                        $data['txtBtn'] = 'Modifier';
+                    }     
+                }     
                 else {
                         $data['TitreDeLaPage'] = 'Ajouter un administrateur';
+                        $data['txtBtn'] = 'Valider';
                 }
             Return view('templates/header', $data).
             view('AdministrateurSuper/ajouter_un_administrateur').
@@ -206,13 +227,13 @@ class AdministrateurSuper extends BaseController
         } else // si formulaire valide
         { 
             if ($val === 'Modifier') {
-                $idEmp = $this->request->getPost('IdentifiantEmp');
-                $donneesAUpdate = array(
-                    'IDENTIFIANT' => $this->request->getPost('Identifiant'),
-                    'EMAIL' => $this->request->getPost('Email'),
-                    'MOTDEPASSE' => $this->request->getPost('Mdp'),
-                );
-                $modelAdm->update($idEmp, $donneesAUpdate);
+                    $idEmp = $this->request->getPost('IdentifiantEmp');
+                    $donneesAUpdate = array(
+                        'IDENTIFIANT' => $this->request->getPost('Identifiant'),
+                        'EMAIL' => $this->request->getPost('Email'),
+                        'MOTDEPASSE' => $this->request->getPost('Mdp'),
+                    );
+                    $modelAdm->update($idEmp, $donneesAUpdate);
             }
             else 
             {
@@ -224,7 +245,7 @@ class AdministrateurSuper extends BaseController
                 );
             $modelAdm->insert($donneesAInserer);  
             }
-            return redirect()->to('visiteur/lister_les_produits');
+            return redirect()->to('AdministrateurSuper/ajouter_un_administrateur');
                 }
             }
 
@@ -255,9 +276,10 @@ class AdministrateurSuper extends BaseController
         }
         Return view('templates/header', $data).
         view('AdministrateurSuper/ajouter_un_administrateur').
-        view('templates/footer');
-        
+        view('templates/footer');     
     }
+
+    
 
     public function rendre_indisponible($noProduit = null)
     {
@@ -353,6 +375,61 @@ class AdministrateurSuper extends BaseController
         }
     }
 
+    public function modifier_adm_super(){
+        $session = session();
+        if ($session->get('statut') != 3){
+            return redirect()->to('visiteur/accueil');
+        } 
+        helper(['form']);
+        $modelAdm = new ModeleAdministrateur();
+        $modelCat = new ModeleCategorie();
+        $admSuper = $modelAdm->retourner_administrateur_super();
+        $data['categories'] = $modelCat->retourner_categories();
+        $data['TitreDeLaPage'] = 'Modfier le compte super administrateur';
+        if (isset($_POST['btnValidate'])){
+            $val = $_POST['btnValidate'];
+        }else {
+            $val = "Modifier";
+        }   
+
+        $rules = [ //régles de validation creation
+            'Identifiant' => 'required',
+            'Mdp' => 'required',
+        ];
+        $messages = [ //message à renvoyer en cas de non respect des règles de validation
+            'Mdp'    => [
+                'required' => 'Mot de passe non renseigné',
+            ],
+            'Identifiant'    => [
+                'required' => 'Email non renseigné',
+            ]
+
+        ];
+        if (!$this->validate($rules , $messages)) {
+            if ($_POST) $data['TitreDeLaPage'] = 'Corriger votre modification';
+            else {
+                    $data['TitreDeLaPage'] = 'Modfier le compte super administrateur';
+                    $val = "Modifier";
+                    $data['txtIdentifiant'] = $admSuper['IDENTIFIANT'];
+            }
+        Return view('templates/header', $data).
+        view('AdministrateurSuper/modifier_compte_administrateur_super').
+        view('templates/footer');
+    } else
+    { 
+        if ($val === 'Modifier') {
+                $idEmp = $this->request->getPost('IdentifiantEmp');
+                $donneesAUpdate = array(
+                    'IDENTIFIANT' => $this->request->getPost('Identifiant'),
+                    'MOTDEPASSE' => $this->request->getPost('Mdp'),
+                );
+                $modelAdm->update($idEmp, $donneesAUpdate);
+        }
+        return redirect()->to('visiteur/lister_les_produits');
+            }
+        }
+
+
     function modifier_identifiants_bancaires_site()
     {
         $session = session();
@@ -434,12 +511,12 @@ class AdministrateurSuper extends BaseController
             $email->setTo($abo['MAIL']);
             $email->setSubject('NewsLetter');
             $email->setMessage('Merci de ton inscription à la NewsLetter');
-            $email->send();
-            
+            $email->send();            
         }
         return redirect()->to('visiteur/lister_les_produits');
     }
 
-    }
 }
 
+
+}

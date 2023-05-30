@@ -1,0 +1,714 @@
+CRITICAL - 2023-05-29 05:19:10 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-05-29 05:20:19 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-05-29 05:21:45 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-05-29 05:44:30 --> Undefined variable $categories
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\templates\header.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 37)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('templates/heade...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(60): view('templates/heade...', Array)
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->afficher_les_commandes_non_traitees()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-29 05:45:05 --> Undefined array key "NOCOMMANDE"
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\AdministrateurEmploye\commande_non_traite.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Propri...', 18)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurE...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(63): view('AdministrateurE...')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->afficher_les_commandes_non_traitees()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+ERROR - 2023-05-29 05:48:18 --> Champ 'commande.noclient' inconnu dans on clause
+CRITICAL - 2023-05-29 05:48:18 --> Champ 'commande.noclient' inconnu dans on clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(46): App\Models\Modele_commande->retourner_commande('74')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('74')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 05:48:25 --> Champ 'commande.noclient' inconnu dans on clause
+CRITICAL - 2023-05-29 05:48:25 --> Champ 'commande.noclient' inconnu dans on clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(46): App\Models\Modele_commande->retourner_commande('77')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('77')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 05:49:59 --> Champ 'commande.NOCLIENT' inconnu dans where clause
+CRITICAL - 2023-05-29 05:49:59 --> Champ 'commande.NOCLIENT' inconnu dans where clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(32): App\Models\Modele_commande->retourner_commandes_client('1')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->historique_des_commandes('1')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 05:50:15 --> Champ 'commande.NOCLIENT' inconnu dans where clause
+CRITICAL - 2023-05-29 05:50:15 --> Champ 'commande.NOCLIENT' inconnu dans where clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(32): App\Models\Modele_commande->retourner_commandes_client('13')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->historique_des_commandes('13')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 05:50:25 --> Champ 'commande.NOCLIENT' inconnu dans where clause
+CRITICAL - 2023-05-29 05:50:25 --> Champ 'commande.NOCLIENT' inconnu dans where clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(32): App\Models\Modele_commande->retourner_commandes_client('14')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->historique_des_commandes('14')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+CRITICAL - 2023-05-29 05:55:21 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurE...', Array, true)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(52): view('AdministrateurE...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('74')
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-29 07:14:28 --> Too few arguments to function App\Controllers\AdministrateurEmploye::traiter_la_commande(), 0 passed in C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+ERROR - 2023-05-29 07:27:29 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL: Handshake timed out
+ERROR - 2023-05-29 07:28:37 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL: Handshake timed out
+ERROR - 2023-05-29 07:41:50 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL: Handshake timed out
+ERROR - 2023-05-29 07:43:11 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL: Handshake timed out
+CRITICAL - 2023-05-29 07:45:47 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2023-05-29 07:48:07 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL: Une connexion existante a dû être fermée par l’hôte distant
+CRITICAL - 2023-05-29 07:49:38 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-05-29 07:53:39 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-05-29 07:53:43 --> Too few arguments to function App\Controllers\AdministrateurEmploye::traiter_la_commande(), 0 passed in C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-05-29 07:53:55 --> Too few arguments to function App\Controllers\AdministrateurEmploye::traiter_la_commande(), 0 passed in C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-05-29 07:53:56 --> Too few arguments to function App\Controllers\AdministrateurEmploye::traiter_la_commande(), 0 passed in C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-05-29 07:53:56 --> Too few arguments to function App\Controllers\AdministrateurEmploye::traiter_la_commande(), 0 passed in C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-05-29 07:54:03 --> Too few arguments to function App\Controllers\AdministrateurEmploye::traiter_la_commande(), 0 passed in C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-05-29 07:54:06 --> Too few arguments to function App\Controllers\AdministrateurEmploye::traiter_la_commande(), 0 passed in C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#5 {main}
+CRITICAL - 2023-05-29 08:01:49 --> Call to undefined function form_open()
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include()
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurE...', Array, true)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(52): view('AdministrateurE...')
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('74')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#9 {main}
+CRITICAL - 2023-05-29 08:08:13 --> Unmatched '}'
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('AdministrateurE...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('AdministrateurE...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-29 08:54:12 --> Undefined variable $categories
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\templates\header.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 37)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('templates/heade...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\Visiteur.php(344): view('templates/heade...', Array)
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-29 09:01:32 --> Undefined variable $session
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\AdministrateurEmploye\details_commande.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 67)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurE...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(52): view('AdministrateurE...')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('74')
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+ERROR - 2023-05-29 09:11:06 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+CRITICAL - 2023-05-29 09:11:06 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update('77', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:13:57 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+CRITICAL - 2023-05-29 09:13:57 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(77, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:15:12 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+CRITICAL - 2023-05-29 09:15:12 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(77, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:15:44 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+CRITICAL - 2023-05-29 09:15:44 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(77, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+CRITICAL - 2023-05-29 09:20:51 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('77', 'update')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, '77')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(Array, '77')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+ERROR - 2023-05-29 09:22:31 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+CRITICAL - 2023-05-29 09:22:31 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update('77', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:23:04 --> Erreur de syntaxe près de '`com`.`id` IN ('77')' à la ligne 2
+CRITICAL - 2023-05-29 09:23:04 --> Erreur de syntaxe près de '`com`.`id` IN ('77')' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update('77', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:23:45 --> Champ 'com.noclient' inconnu dans on clause
+CRITICAL - 2023-05-29 09:23:45 --> Champ 'com.noclient' inconnu dans on clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(46): App\Models\Modele_commande->retourner_commande('77')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('77')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:23:46 --> Champ 'com.noclient' inconnu dans on clause
+CRITICAL - 2023-05-29 09:23:46 --> Champ 'com.noclient' inconnu dans on clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(46): App\Models\Modele_commande->retourner_commande('77')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('77')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:23:47 --> Champ 'com.noclient' inconnu dans on clause
+CRITICAL - 2023-05-29 09:23:47 --> Champ 'com.noclient' inconnu dans on clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(46): App\Models\Modele_commande->retourner_commande('77')
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->details_commande('77')
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:23:48 --> Champ 'com.DATECOMMANDE' inconnu dans field list
+CRITICAL - 2023-05-29 09:23:48 --> Champ 'com.DATECOMMANDE' inconnu dans field list
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `com`.`D...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `com`.`D...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `com`.`D...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `com`.`D...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(61): App\Models\Modele_commande->retourner_commande_non_traitees()
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->afficher_les_commandes_non_traitees()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:23:52 --> Champ 'com.DATECOMMANDE' inconnu dans field list
+CRITICAL - 2023-05-29 09:23:52 --> Champ 'com.DATECOMMANDE' inconnu dans field list
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `com`.`D...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `com`.`D...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `com`.`D...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `com`.`D...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(61): App\Models\Modele_commande->retourner_commande_non_traitees()
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->afficher_les_commandes_non_traitees()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:24:30 --> Erreur de syntaxe près de '`com`.`com`.`NOCOMMANDE` IN ('74')' à la ligne 2
+CRITICAL - 2023-05-29 09:24:30 --> Erreur de syntaxe près de '`com`.`com`.`NOCOMMANDE` IN ('74')' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update('74', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:24:46 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('74')' à la ligne 2
+CRITICAL - 2023-05-29 09:24:46 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('74')' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update('74', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+CRITICAL - 2023-05-29 09:30:53 --> There is no data to update.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(35): CodeIgniter\Model->update(Array)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): App\Models\Modele_commande->traiter_commande('74', Array)
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-29 09:31:25 --> There is no data to update.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(35): CodeIgniter\Model->update(Array)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): App\Models\Modele_commande->traiter_commande('74', Array)
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-29 09:32:46 --> There is no data to update.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(38): CodeIgniter\Model->update(Array)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(70): App\Models\Modele_commande->traiter_commande('74')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-29 09:33:11 --> There is no data to update.
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(38): CodeIgniter\Model->update(Array)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(70): App\Models\Modele_commande->traiter_commande('74')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+ERROR - 2023-05-29 09:36:46 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+CRITICAL - 2023-05-29 09:36:46 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(74, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:37:55 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+CRITICAL - 2023-05-29 09:37:55 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(74, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:58:02 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+CRITICAL - 2023-05-29 09:58:02 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(74, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:59:51 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+CRITICAL - 2023-05-29 09:59:51 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (74)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(74, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 09:59:58 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+CRITICAL - 2023-05-29 09:59:58 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(77, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 10:03:46 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+CRITICAL - 2023-05-29 10:03:46 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update('77', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 10:05:37 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+CRITICAL - 2023-05-29 10:05:37 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('77')' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update('77', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 10:08:23 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+CRITICAL - 2023-05-29 10:08:23 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN (77)' à la ligne 2
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(73): CodeIgniter\Model->update(77, Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 10:11:20 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('commande')' à la ligne 3
+CRITICAL - 2023-05-29 10:11:20 --> Erreur de syntaxe près de '`com`.`NOCOMMANDE` IN ('commande')' à la ligne 3
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(23): CodeIgniter\Model->update('commande', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(74): App\Models\Modele_commande->modifier_commande(77, Array)
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#14 {main}
+CRITICAL - 2023-05-29 10:13:03 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('23/05/29', 'update')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, '23/05/29')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(23): CodeIgniter\Model->update('DATETRAITEMENT', '23/05/29')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(72): App\Models\Modele_commande->modifier_commande(77, '23/05/29')
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#9 {main}
+CRITICAL - 2023-05-29 10:16:29 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('23/05/29', 'update')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, '23/05/29')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(23): CodeIgniter\Model->update('DATETRAITEMENT', '23/05/29')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(72): App\Models\Modele_commande->modifier_commande(77, '23/05/29')
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#9 {main}
+ERROR - 2023-05-29 10:18:00 --> Champ 'com.NOCLIENT' inconnu dans on clause
+CRITICAL - 2023-05-29 10:18:00 --> Champ 'com.NOCLIENT' inconnu dans on clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `command...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `command...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `command...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `command...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(61): App\Models\Modele_commande->retourner_commande_non_traitees()
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->afficher_les_commandes_non_traitees()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+CRITICAL - 2023-05-29 10:22:31 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2023-05-29 11:26:40 --> Champ: 'NOCOMMANDE' dans where clause est ambigu
+CRITICAL - 2023-05-29 11:26:40 --> Champ: 'NOCOMMANDE' dans where clause est ambigu
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `prod`.`...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prod`.`...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prod`.`...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `prod`.`...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Models\Modele_commande.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurEmploye.php(74): App\Models\Modele_commande->retourner_produit_nocommande(74)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurEmploye->traiter_la_commande()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurEmploye))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-29 13:58:28 --> Champ 'LIBELLE' inconnu dans where clause
+CRITICAL - 2023-05-29 13:58:28 --> Champ 'LIBELLE' inconnu dans where clause
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Validation\Rules.php(161): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Validation\Validation.php(277): CodeIgniter\Validation\Rules->is_unique('Nike', 'LIBELLE', Array, NULL)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Validation\Validation.php(151): CodeIgniter\Validation\Validation->processRules('txtMarque', 'txtMarque', 'Nike', Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(157): CodeIgniter\Controller->validate(Array, Array)
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_une_marque()
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#14 {main}

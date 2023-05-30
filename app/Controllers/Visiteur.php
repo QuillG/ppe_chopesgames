@@ -9,6 +9,8 @@ use App\Models\ModeleCategorie;
 use App\Models\ModeleMarque;
 use App\Models\ModeleAdministrateur;
 use App\Models\ModeleAbonnes;
+use App\Models\ModeleLigne;
+
 //use App\Models\ModeleAdministrateur;
 //$pager = \Config\Services::pager();
 helper(['url', 'assets']);
@@ -248,6 +250,8 @@ public function prodBySlug($slug){
     {
 
         helper(['form']);
+        $modelCat = new ModeleCategorie();
+        $data['categories'] = $modelCat->retourner_categories();
         $validation =  \Config\Services::validation();
         $data['TitreDeLaPage'] = "S'enregister";
         $session = \Config\Services::session();
@@ -479,7 +483,6 @@ public function prodBySlug($slug){
 
     public function s_enregistrer_Newletter(){
         $email = \Config\Services::email();
-        $session = session();;
         $modelAbo = new ModeleAbonnes();
         $mail = $this->request->getPost('txtMail');
             if ($modelAbo->retourner_abonnesParMail($mail)) { // enregistrement
@@ -489,9 +492,9 @@ public function prodBySlug($slug){
                 $data = [
                     'MAIL' => $mail,
                 ];
-                 
-                $modelAbo->insert($data);// envoi d'une modification de compte
-                $email->setFrom('ChopeGames@gmail.com', 'ChopeGames');
+                
+                $modelAbo->insert($data);// ajout d'un abonnee
+                $email->setFrom('Admin@ChopeGames.com', 'ChopeGames'); //
                 $email->setTo($mail);
                 $email->setSubject('NewsLetter');
                 $email->setMessage('Merci de ton inscription à la NewsLetter');

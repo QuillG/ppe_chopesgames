@@ -85,7 +85,7 @@ if ($session->has('cart')) {
                                 <a class="dropdown-item" href="<?php echo base_url('Client/historique_des_commandes') ?>">Mes commandes</a>
                                 <a class="dropdown-item" href="<?php echo base_url('Visiteur/s_enregistrer') ?>">Modifier son compte</a>
                             <?php } elseif ($session->get('statut') == 3) { ?>
-                                <a class="dropdown-item" href="?>">(2Do) Modifier son compte</a>
+                                <a class="dropdown-item" href="<?php echo base_url('AdministrateurSuper/modifier_adm_super') ?>">Modifier son compte</a>
                             <?php } ?>
                             <a class="dropdown-item" href="<?php echo base_url('Client/se_de_connecter') ?>">Se déconnecter</a>
                         <?php } else { ?>

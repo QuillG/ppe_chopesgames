@@ -3,7 +3,7 @@
     </div>
     <div class="col">
     
-        <div class="row align-items-center">
+        <div class="row align-items-center mt-5">
         <h2>Commande n°<?php echo $commande['NOCOMMANDE']; ?></h2>
             <table class="table">
 
@@ -38,7 +38,7 @@
             </div>
             </div>
                 <span style="display:inline-block; width: 40px;"></span>
-                <div class="col-md-3">
+                <div class="col-md-3 mt-5 me-4">
                     <div class="border border-secondary">
                     <h3 class="text-center top">Informations client</h3>
                     <table class="table">
@@ -64,6 +64,13 @@
                     </tr>
                     </table>
              </div>
+             <?php if ($commande['DATETRAITEMENT'] == NULL && session('statut') > 1) :?>
+                <form class="d-flex justify-content-center" role="add" method="post" action="<?php echo base_url('AdministrateurEmploye/traiter_la_commande') ?>">
+                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
+                    <input type="hidden" name="noCommande" id="noCommande" value="<?php echo $commande['NOCOMMANDE']; ?>">
+                    <input type="submit" name="submit" class="btn btn-danger btn-md mt-3" value="Passer la commande à 'Traitée'">
+                </form>
+                    <?php endif;?>
     <div class="col-sm-1">
     </div>
            

@@ -14,9 +14,10 @@
                                 </tr>
                             </thead>
                         <?php
-                        foreach($commandes as $commande){?>
+                        foreach($commandesNonTraitees as $commande){?>
                         <tr onclick="window.location.href = '<?php echo site_url('AdministrateurEmploye/details_commande/'.$commande['NOCOMMANDE']) ?>'" class="hover">
                             <td><?php echo substr($commande['DATECOMMANDE'],0,10);?> </td>
+                            <td><?php echo ($commande['NOM']." ".$commande['PRENOM']);?> </td>
                             <td> <?php echo $commande['TOTALTTC'].'€';?></td> </tr>
                         <?php }?></table>
                     </div>

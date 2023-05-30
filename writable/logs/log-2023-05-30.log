@@ -1,0 +1,98 @@
+CRITICAL - 2023-05-30 08:28:00 --> syntax error, unexpected token ")"
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('AdministrateurS...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('AdministrateurS...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 08:28:04 --> syntax error, unexpected token ")"
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('AdministrateurS...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('AdministrateurS...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 08:28:24 --> Undefined variable $valBtn
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 211)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 08:28:28 --> Undefined variable $valBtn
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 211)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 08:29:06 --> Undefined array key "btnValidate"
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Propri...', 182)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+ERROR - 2023-05-30 08:38:18 --> Duplicata du champ 'quentin22' pour la clef 'administrateur.PRIMARY'
+CRITICAL - 2023-05-30 08:38:18 --> Duplicata du champ 'quentin22' pour la clef 'administrateur.PRIMARY'
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `adminis...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `adminis...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `adminis...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `adminis...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(236): CodeIgniter\Model->update('quentin23', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+ERROR - 2023-05-30 08:38:54 --> Duplicata du champ 'amin' pour la clef 'administrateur.PRIMARY'
+CRITICAL - 2023-05-30 08:38:54 --> Duplicata du champ 'amin' pour la clef 'administrateur.PRIMARY'
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `adminis...', 0)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `adminis...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `adminis...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Database\BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `adminis...', Array, false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(236): CodeIgniter\Model->update('quentin22', Array)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->ajouter_un_administrateur()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#10 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#13 {main}
+CRITICAL - 2023-05-30 10:04:12 --> syntax error, unexpected token "public", expecting end of file
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('AdministrateurS...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('AdministrateurS...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 10:08:27 --> Invalid file: AdministrateurSuper/modifier_compte_administrateur.php
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('AdministrateurS...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('AdministrateurS...', Array, true)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\AdministrateurSuper.php(415): view('AdministrateurS...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\AdministrateurSuper->modifier_adm_super()
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdministrateurSuper))
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-30 10:15:08 --> syntax error, unexpected token "}"
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('AdministrateurS...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('AdministrateurS...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
