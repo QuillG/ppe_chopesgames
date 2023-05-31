@@ -483,12 +483,30 @@ public function prodBySlug($slug){
 
     public function s_enregistrer_Newletter(){
         $email = \Config\Services::email();
+        $modelProd = new ModeleProduit();
+        $data['vitrines'] = $modelProd->retourner_vitrine();
+        $modelCat = new ModeleCategorie();
+        $data['categories'] = $modelCat->retourner_categories();
+        $modelMarq = new ModeleMarque();
+        $data['marques'] = $modelMarq->retourner_marques();
         $modelAbo = new ModeleAbonnes();
         $mail = $this->request->getPost('txtMail');
-            if ($modelAbo->retourner_abonnesParMail($mail)) { // enregistrement
-                print_r("Le client existe"); exit ;
-
-            } else {
+        $rules = [ //régles de validation creation
+            'txtMail' => 'required|valid_email|is_unique[abonnes.MAIL]',
+        ];
+        $messages = [ //message à renvoyer en cas de non respect des règles de validation
+            'txtMail' => [
+                'required' => 'L\'adresse email est déjà renseignée ou le format est incorrect',
+                'valid_email' => 'L\'adresse email est déjà renseignée ou le format est incorrect',
+                'is_unique' => 'L\'adresse email est déjà renseignée ou le format est incorrect',
+            ],
+        ];
+        if (!$this->validate($rules, $messages)) {
+            if ($_POST) $data['TitreDeLaPage'] = 'Corriger';
+            Return view('templates/header', $data).
+            view('visiteur/accueil').
+            view('templates/footer');
+        }else {
                 $data = [
                     'MAIL' => $mail,
                 ];
@@ -500,14 +518,6 @@ public function prodBySlug($slug){
                 $email->setMessage('Merci de ton inscription à la NewsLetter');
                 $email->send();
             }
-        
-            $modelProd = new ModeleProduit();
-            $data['vitrines'] = $modelProd->retourner_vitrine();
-            $modelCat = new ModeleCategorie();
-            $data['categories'] = $modelCat->retourner_categories();
-            $modelMarq = new ModeleMarque();
-            $data['marques'] = $modelMarq->retourner_marques();
-    
             Return view('templates/header', $data).
             view('visiteur/accueil').
             view('templates/footer');

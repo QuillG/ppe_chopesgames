@@ -96,3 +96,75 @@ CRITICAL - 2023-05-30 10:15:08 --> syntax error, unexpected token "}"
 #4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
 #6 {main}
+CRITICAL - 2023-05-30 14:16:09 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-05-30 14:22:16 --> Unclosed '{' on line 18
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('Visiteur/accuei...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('Visiteur/accuei...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 14:22:37 --> Unclosed '{' on line 18
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Propri...')
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(789): class_exists('\\App\\Controller...', true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(397): CodeIgniter\CodeIgniter->startController()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#8 {main}
+CRITICAL - 2023-05-30 14:31:56 --> Undefined variable $TitreDeLaPage
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\templates\footer.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 29)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\Visiteur.php(31): view('templates/foote...')
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\Visiteur->accueil()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-30 14:35:01 --> Undefined variable $categories
+#0 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Views\templates\header.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Propri...', 37)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(214): include('C:\\Users\\Propri...')
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Common.php(1097): CodeIgniter\View\View->render('templates/heade...', Array, true)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\app\Controllers\Visiteur.php(500): view('templates/heade...', Array)
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(824): App\Controllers\Visiteur->s_enregistrer_Newletter()
+#6 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#10 {main}
+CRITICAL - 2023-05-30 14:35:42 --> str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'str_replace(): ...', 'C:\\Users\\Propri...', 438)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\HTTP\ResponseTrait.php(438): str_replace(Array, '', NULL)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(389): CodeIgniter\HTTP\Response->send()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 14:36:24 --> str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'str_replace(): ...', 'C:\\Users\\Propri...', 438)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\HTTP\ResponseTrait.php(438): str_replace(Array, '', NULL)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(389): CodeIgniter\HTTP\Response->send()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
+CRITICAL - 2023-05-30 14:39:04 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-05-30 14:41:27 --> str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'str_replace(): ...', 'C:\\Users\\Propri...', 438)
+#1 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\HTTP\ResponseTrait.php(438): str_replace(Array, '', NULL)
+#2 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(389): CodeIgniter\HTTP\Response->send()
+#3 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Proprietaire\Desktop\ppe_chopesgames\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Proprietaire\Desktop\ppe_chopesgames\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Propri...')
+#6 {main}
